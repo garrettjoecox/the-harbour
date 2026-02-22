@@ -13,3 +13,22 @@ When updating, always extract all contents of the zip to your existing folder, o
 3. **Open the executable/app** and follow the prompts to select your ROM.
     - On MacOS, you may have to go into your System Settings > Privacy & Security to approve the app after trying to open it for the first time.
 4. Enjoy!
+
+## Unofficial/Unsupported Builds
+We cannot guarantee these will work or provide support for them, but this is a list of other builds from the community:
+
+**WiiU:**
+- Download:https://github.com/ajfleming1/2ship2harkinian-WiiU/releases
+
+**Switch:**
+- Download: https://github.com/YoshiCrystal9/2ship2harkinian-Switch/releases
+
+**Android:**
+- Download: https://github.com/Waterdish/2ship2harkinian-Android/releases
+
+**UWP for Xbox Series S|X:**
+- Download: https://github.com/SternXD/2ship2harkinian-uwp/releases
+
+**PortMaster Supported Handhelds:**
+- Download: https://portmaster.games/detail.html?name=soh2
+- Support: PortMaster Discord, found at https://portmaster.games/
