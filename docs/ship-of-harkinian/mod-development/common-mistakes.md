@@ -1,3 +1,5 @@
+# Common Mistakes
+
 ## Common mistakes when making mods
 
 When making mods for Ship of Harkinian. There are sometimes different issues that can happen when misstakes are done.
