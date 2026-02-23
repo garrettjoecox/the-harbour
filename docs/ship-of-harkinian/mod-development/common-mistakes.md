@@ -6,9 +6,9 @@ When making mods for Ship of Harkinian. There are sometimes different issues tha
 
 ## "Meat Tornado"
 
-Link turns into a meat tornado and doesnt look hylian. Usually caused by geometry assigned to multiple vertex groups.
+Link turns into a meat tornado and doesnt look hylian. Usually caused by geometry assigned to multiple vertex groups, or your model is too high poly. (Im talking like tri count in the 100,000's).
 
-Workaround: Double check all vertex groups to make sure gemotry are not assigned to multiple vertex groups. If that doesnt work, Delete and apply a new skeleton onto the model.
+Workaround: Double check all vertex groups to make sure geometry are not assigned to multiple vertex groups. If that doesnt work, Delete and apply a new skeleton onto the model.
 
 ## Corrupted Textures
 

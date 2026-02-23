@@ -8,6 +8,8 @@ Essential tools and resources for Ship of Harkinian mod development.
 
 The primary Blender plugin for creating and exporting models, animations, and scenes for N64 games.
 
+**Repository:** https://github.com/Jameriquiah/fast64/tree/hm64 [Recommended]
+
 **Repository:** https://github.com/HarbourMasters/fast64/tree/legacy
 
 Fast64 allows you to:
