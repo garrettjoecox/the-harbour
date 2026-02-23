@@ -6,7 +6,7 @@ Affects: Model import/export through Fast64 plugin.
 Description: A significant number of DLs cannot be imported into Blender, reporting the error "Index out of range" when attempting to do so. A null object imports into the Blender scene. Attempting a blind export to affected DLs does not produce functional results.
 Most affected DLs appear to be parented to joints or objects; this relationship is broken in a blind export.
 
-Workarounds: None discovered.
+Workarounds: Open the objects C file, e.g. `object_link_child.c` `object_link_boy.c` and use `Ctrl+F` to search for the DL you want to import, when you locate it, look for a line in the DL, beginning with `gsSPMatrix`. Delete this line, its typically at the top of the DL entry, certan DLs like the bunny hood will have multiple of these lines (for the ears), delete them too and reimport.
 
 ## Base texture extraction and manifest generation failing in Retro
 
@@ -15,7 +15,7 @@ Description: Attempting to unpack asset archives with the latest versions of Ret
 
 Workarounds: Retro 0.0.5 alpha does not appear to have this issue - using this version to unpack the archives, and the latest version to pack them, appears to be the best solution for now.
 
-Workarounds: Update to Retro 0.2.1 as texture extraction have been fixed in that version
+Workarounds: Update to Retro 0.2.1 as texture extraction has been fixed in that version
 
 ## Retro Linux .Appimage
 
