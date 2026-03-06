@@ -14,12 +14,11 @@ git clone --revision=0c6c112cb9a3a8f12d0f4865743853857bbdc88e git@github.com:zel
 ```
 
 ### Fast64
-
-The primary Blender plugin for creating and exporting models, materials, animations for SoH. This is a fork of the original, purpose built for SoH modding.
-
 :::warning
 If you have done mods using legacy fast64. Jamer's Fast64 import and exports at a different scale compared to legacy
 :::
+The primary Blender plugin for creating and exporting models, materials, animations for SoH. This is a fork of the original, purpose built for SoH modding.
+
 **Repository:** https://github.com/Jameriquiah/fast64/tree/hm64
 
 :::warning 
