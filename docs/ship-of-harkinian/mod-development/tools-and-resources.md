@@ -6,24 +6,22 @@ Essential tools and resources for Ship of Harkinian mod development.
 
 The original decomp project for OoT. For code mods this can be useful as sometimes there is additional documentation upstream that hasn't made it's way to our codebase that could help with whatever you are working on.
 
-If you are not looking for documentation, but instead are using decomp in combination with another tool like Fast64, it is recommended to use commit [0c6c112](https://github.com/zeldaret/oot/tree/0c6c112cb9a3a8f12d0f4865743853857bbdc88e)
+If you are not looking for documentation, but instead are using decomp in combination with another tool like Fast64.
 
-You can directly download the [zip of the codebase here](https://github.com/zeldaret/oot/archive/0c6c112cb9a3a8f12d0f4865743853857bbdc88e.zip) or you can clone with Git:
+You can directly download the [zip of the codebase here](https://github.com/zeldaret/oot) or you can clone with Git:
 ```sh
-git clone --revision=0c6c112cb9a3a8f12d0f4865743853857bbdc88e git@github.com:zeldaret/oot.git
+git clone https://github.com/zeldaret/oot.git
 ```
 
 ### Fast64
+It's highly recommended that if you are loading a blend file you previously used and made edits in with legacy Fast64, to create a brand new file and append your old blend file's contents into it instead of just loading the original blend. **Cached data and carried over legacy settings can and will cause material bugs and export errors.**
+
 :::warning
-If you have done mods using legacy fast64. Jamer's Fast64 import and exports at a different scale compared to legacy
+If you have done mods using legacy Fast64. Jameriquiah's Fast64 imports and exports at a different scale compared to legacy. If you are opening a blend with DL's you imported from legacy, reimport the original DL, delete all geometry and materials **in edit mode**, then join your old DL into the new import.
 :::
 The primary Blender plugin for creating and exporting models, materials, animations for SoH. This is a fork of the original, purpose built for SoH modding.
 
 **Repository:** https://github.com/Jameriquiah/fast64/tree/hm64
-
-:::warning 
-Needs specific version of Decomp in order to import original assets. Check the "Decomp" section above
-:::
 
 ### Retro
 
