@@ -8,7 +8,7 @@ The original decomp project for OoT. For code mods this can be useful as sometim
 
 If you are not looking for documentation, but instead are using decomp in combination with another tool like Fast64.
 
-You can directly download the [zip of the codebase here](https://github.com/zeldaret/oot) or you can clone with Git:
+You can directly download the [zip of the codebase here](https://github.com/zeldaret/oot/archive/refs/heads/main.zip) or you can clone with Git:
 ```sh
 git clone https://github.com/zeldaret/oot.git
 ```
