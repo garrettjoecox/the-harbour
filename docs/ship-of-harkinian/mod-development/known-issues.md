@@ -44,8 +44,4 @@ Requires a specific version of https://github.com/zeldaret/oot
 Do the install in the readme but before step **3** do `git checkout 21cb04d` to downgrade decomp to a version compatible with Legacy Fast64
 
 **Fast64 HM64 Fork by Jameriquiah**
-Requires a specific version of https://github.com/zeldaret/oot
-
-Do the install in the readme but before step **3** do `git checkout 0c6c112` to downgrade decomp to a version compatible with Jamer's Fast64
-
-Alternatively, you can also clone and set this fork of decomp up instead, which is already set at the `0c6c112` commit: https://github.com/Jameriquiah/oot
+As of 2026-03-08 If you have the latest version of Jameriquiah's Fast64 Plugin then latest decomp will work with Fast64.
