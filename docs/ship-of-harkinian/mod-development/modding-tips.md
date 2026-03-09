@@ -10,6 +10,8 @@ import child_3 from "./img/child_3.png"
 import child_4 from "./img/child_4.png"
 import child_5 from "./img/child_5.png"
 import child_6 from "./img/child_6.png"
+import segmentc from "./img/segmentc.png"
+import culloptions from "./img/culloptions.png"
 
 # Modding Tips
 
@@ -39,6 +41,24 @@ Note: The tool only supports Objects as of this writing.
 Objects with multiple Segment values are not supported by this tool; an error will display, prompting you to handle the files manually.
 
 **NOTE:** *If you are using Jameriquiah's Fast64 Fork, segcalls can be automatically added to your exported files via the segment checkboxes in the material settings, same rules stated above still apply.*
+
+## Segment C on Link
+
+Link in particular uses Segment `0x0C000000` specifically for one thing, it handles how his reflection in the Water Temple's Dark Link room.
+
+Setting up custom model's for this is pretty easy, and if you don't do it then your character's reflection will be flipped inside out. For Link and *all* of his equipment, enable Segment C in your material settings for each material.
+
+<img src={segmentc} alt="Segment C" width="300" />
+
+Then in the `Geo` tab in the Fast64 material settings, ensure that both `Cull Front` AND `Cull Back` are both turned off.
+
+<img src={culloptions} alt="Cull Options" width="300" />
+
+For materials that you want backface culling always off for, such as the inside of a skirt, or any geometry that you don't want to be 1 sided, keep both culls disabled but also disable Segment C just for that material.
+
+:::warning
+Any materials that use transparency in any way, such as translucency, cutouts, decals, etc. will not be able to pass through Segment C and will need Segment C disabled or else they will cause all sorts of graphical glitches on the reflection. If you want these materials to not be flipped inside out in the reflection, the only option is the disable Segment C and disable both Cull Front and Cull Back.
+:::
 
 ## Exploding "Body Break" Enemies
 
