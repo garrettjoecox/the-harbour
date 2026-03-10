@@ -12,6 +12,7 @@ import child_5 from "./img/child_5.png"
 import child_6 from "./img/child_6.png"
 import segmentc from "./img/segmentc.png"
 import culloptions from "./img/culloptions.png"
+import matrixpath from "./img/matrixpath.png"
 
 # Modding Tips
 
@@ -134,29 +135,27 @@ You can create null geometry for these bones by adding some new geometry, such a
 
 ## Attaching Custom Boots/Bracelet to Modified Skeleton
 
-You can attach custom boots and the Goron bracelet to custom player models by inserting an extra line of code in the exported iron/hover boot/goron bracelet DLs. Fast64 doesn't do this automatically, so you need to add it manually.
+For gauntlets and boots, the game anchors them into place using a matrix call, which can tell the game which bone something it supposed to draw from. Many DL's like hands and equipment don't need this but boots and gauntlets will need a matrix call in order to not draw at the root bone of the model.
 
-Insert the correct line after the `<DisplayList Version="0">` tag:
+This can easily be handled within Fast64 in the DL Exporter tab, simply add a new entry with the `+` button and select the bone you want the DL attached to from the dropdown menu.
 
-**For right boots:**
-```xml
-<Matrix Path=">0x0D0000C0" Param="G_MTX_LOAD" />
-```
+<img src={matrixpath} alt="Matrix Path" width="500" />
 
-**For left boots:**
-```xml
-<Matrix Path=">0x0D000180" Param="G_MTX_LOAD" />
-```
+The original matrices these DL's use in vanilla should be pretty self-explanatory but just incase:
+```gLinkAdultLeftIronBootDL - Left Foot
+gLinkAdultRightIronBootDL - Right Foot
+gLinkAdultLeftHoverBootDL - Left Foot
+gLinkAdultRightHoverBootDL - Right Foot
 
-**For goron bracelet:**
-```xml
-<Matrix Path=">0x0D0002C0" Param="G_MTX_LOAD" />
-```
+gLinkAdultLeftGauntletPlate1DL - Left Arm
+gLinkAdultLeftGauntletPlate2DL - Left Hand
+gLinkAdultLeftGauntletPlate3DL - Left Hand
+gLinkAdultRightGauntletPlate1DL - Right Arm
+gLinkAdultRightGauntletPlate2DL - Right Hand
+gLinkAdultRightGauntletPlate3DL - Right Hand
 
 :::tip
-Matrix path will lock the origin point of the mesh to the pivot of the bone assigned. You can only assign ONE bone. This means that items like the bunnyhood can be made into something else rather than being a mask - you can make a mesh and have it assigned to the torso, for example wings.
-
-For all bone matrix paths, see: https://docs.google.com/spreadsheets/d/e/2PACX-1vSVvtGR-gzvLiNBSfo5JGmRl0dIBq_Lj1rG0iQNE29v0iFvbVopVH3jO8mWdhoq9q7gHx4IJ7kmCUC5/pubhtml?gid=0&single=true
+You can also use this feature to change which bone a specific DL is anchored to, even bones that do not normally require a matrix call. So for example, you can use this to turn something like a mask, into something that goes on the torso.
 :::
 
 ### Alignment Process
