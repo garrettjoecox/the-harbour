@@ -45,7 +45,7 @@ Objects with multiple Segment values are not supported by this tool; an error wi
 
 ## Segment C on Link
 
-Link in particular uses Segment `0x0C000000` specifically for one thing, it handles how his reflection in the Water Temple's Dark Link room.
+Link in particular uses Segment `0x0C000000` specifically for one thing, it handles his reflection in the Water Temple's Dark Link room.
 
 Setting up custom model's for this is pretty easy, and if you don't do it then your character's reflection will be flipped inside out. For Link and *all* of his equipment, enable Segment C in your material settings for each material.
 
@@ -58,7 +58,7 @@ Then in the `Geo` tab in the Fast64 material settings, ensure that both `Cull Fr
 For materials that you want backface culling always off for, such as the inside of a skirt, or any geometry that you don't want to be 1 sided, keep both culls disabled but also disable Segment C just for that material.
 
 :::warning
-Any materials that use transparency in any way, such as translucency, cutouts, decals, etc. will not be able to pass through Segment C and will need Segment C disabled or else they will cause all sorts of graphical glitches on the reflection. If you want these materials to not be flipped inside out in the reflection, the only option is the disable Segment C and disable both Cull Front and Cull Back.
+Any materials that use transparency such as translucency or cutouts, **EXCEPT decals** those are fine, will not be able to pass through Segment C and will need Segment C disabled or else they will cause all sorts of graphical glitches on the reflection. If you want these materials to not be flipped inside out in the reflection, the only option is the disable Segment C and disable both Cull Front and Cull Back.
 :::
 
 ## Exploding "Body Break" Enemies
