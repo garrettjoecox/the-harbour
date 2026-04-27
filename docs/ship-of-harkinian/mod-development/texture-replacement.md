@@ -1,3 +1,18 @@
+import texture_guide_1 from "./img/texture_guide_1.png"
+import texture_guide_2 from "./img/texture_guide_2.png"
+import texture_guide_3 from "./img/texture_guide_3.png"
+import texture_guide_4 from "./img/texture_guide_4.png"
+import texture_guide_5 from "./img/texture_guide_5.png"
+import texture_guide_6 from "./img/texture_guide_6.png"
+import texture_guide_7 from "./img/texture_guide_7.png"
+import texture_guide_8 from "./img/texture_guide_8.png"
+import texture_guide_9 from "./img/texture_guide_9.png"
+import texture_guide_10 from "./img/texture_guide_10.png"
+import texture_guide_11 from "./img/texture_guide_11.png"
+import texture_guide_12 from "./img/texture_guide_12.png"
+import texture_guide_13 from "./img/texture_guide_13.png"
+import texture_guide_14 from "./img/texture_guide_14.png"
+
 # Texture Modding
 
 This guide will teach you how to use the tools for modding SoH (and 2S2H) to replace textures.
