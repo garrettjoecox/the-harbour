@@ -1,7 +1,3 @@
----
-sidebar_position: 1
----
-
 # Mod Tutorials
 
 Modding tricks and techniques for Ship of Harkinian.
