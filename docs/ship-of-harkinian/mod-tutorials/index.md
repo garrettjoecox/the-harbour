@@ -6,6 +6,7 @@ sidebar_position: 1
 
 Modding tricks and techniques for Ship of Harkinian.
 
-- ### [Fake Specular](./fake-specular/index.md)
 - ### [Attaching Static DLs to Link's Skeleton](./attaching-static-dl/index.mdx)
+- ### [Fake Specular](./fake-specular/index.mdx)
 - ### [Flipbook Animations in the Graph Editor](./flipbookanimations/index.mdx)
+- ### [Rigged DLs](./rigged-dls/index.mdx)
