@@ -1,0 +1,72 @@
+import step1 from "./step1.png"
+import step2 from "./step2.png"
+import step3a from "./step3a.png"
+import step3b from "./step3b.png"
+
+
+# Creating Flipbooks For a Custom Character
+
+## What are Flipbooks?
+
+Flipbooks are sets of textures that are called by character animations for things like facial expressions. In Link's case, he has flipbook textures for his eyes and mouth.
+
+This segment will cover how to replace Link's flipbooks specifically, but the given workflow should be more or less the same for other characters as well.
+
+
+## Step 0 - Setup
+
+Each Link has 12 flipbooks textures total--8 eyes and 4 mouths. Before starting, make sure you have all the necessary expressions ready. They should all be separate .png files with the same dimensions. You can find the names and descriptions for all of Link's face textures at https://docs.google.com/spreadsheets/d/1Yc3b-BRSnnCEPQSKtQKSEdi5oodFSx7bx8zJ05yMhH8/edit?gid=1922966857#gid=1922966857. The texture names will be very important for exporting, so keep this open as you work.
+
+
+## Step 1 - Material Setup
+
+Go to the eye material for your player model, and make sure you have a texture set for the eyes (best practice is to just use the neutral eyes-open texture). If you are using a Color-Indexed format, make sure you set a TLUT name at this time. Underneath "Set Texture" select "Use Texture Reference" and in the box type `0x08000000` as your texture reference. This is what tells the game to look for Link's eye textures.  Set the texture size to match the dimensions of your eye textures.
+
+<img src={step1} alt="Texture Reference" width="300" />
+
+Next, scroll down to where it says "Flipbook Properties" and click "Export Flipbook Textures 0".  Set the Export Mode to Array if it is not already and type in a name for the array (shouldn't really matter what you put so long as its unique).  Now switch the Export Mode to Individual.
+
+
+## Step 2 - Setting Textures
+
+First pull up the flipbook spreadsheet from earlier if you haven't already--we are going to be using the texture names listed in the "SoH Texture Name" column.
+
+For each eye texture in the column: Click on "Add Texture" and where it says "Texture Name" copy and paste the name from the spreadsheet. Now set this texture to use the png you set up for this expression (you will likely have to hit "Open" and navigate to where you have the texture stored on your device). You can now hit "Visualize" if you want to check how the expression looks on your model.
+
+<img src={step2} alt="Setting Textures" width="300" />
+
+:::warning
+Your textures will not work in-game unless the names match *exactly* with the spreadsheet. Pay close attention to the fact that the name of the closed-eyes texture says Closed**f**Tex instead of ClosedTex. This is **not** a mistake in the spreadsheet, just one of many typos in the game itself. This is why it is recommended to copy and paste directly from the spreadsheet rather than retyping it yourself. 
+:::
+
+
+## Step 3 - Mouth
+
+Repeat Steps 1 and 2, but when inputting the Texture Reference use `0x09000000` instead. This tells the game where to look for Link's mouth textures. Other than that, all steps are the same, just with the mouth textures and names rather than the eyes.
+
+<img src={step3a} alt="Mouth Reference" width="300" />
+<img src={step3b} alt="Mouth Textures" width="300" />
+
+
+## Step 4 - Export
+
+With your flipbooks now set up, you may export your skeleton like normal. Check some of Link's animations to make sure all of the textures exported correctly. If everything looks good, then congratulations, you have successfully applied flipbooks to your model!
+
+If something looks wrong, please refer to the next step.
+
+
+## Step 5 - Issue Correction
+
+First, look back through each previous step and ensure you have followed each of them exactly. The most common issues tend to be:
+- Not setting the correct texture reference (`0x08000000` for eyes, `0x09000000` for mouth)
+- Setting the wrong texture size (should match the size of your textures; top number is the number of horizontal pixels and the bottom number is the number of vertical pixels)
+- Using textures too large for fast 64 to pack (generally nothing larger than 64x64)
+- Using the wrong texture names (should match exactly with the names in the spreadsheet, including the 'f' for the eyes-closed texture)
+- Exporting on Array Mode instead of Individual
+- Textures are off color - make sure the actual image file is 32-bit, not 64
+- Not properly setting a TLUT name when using a Color-Indexed format (should be set in the normal TLUT Name box before clicking the "Set Texture Reference" box
+	- To fix, temporarily uncheck "Set Texture Reference", type in your TLUT name, then re-check
+- Using the RGBA-16 with a color-indexed png
+	- This can be fixed by either using a non color-indexed texture or resizing your texture to be 64x64, as SoH will no longer try to interpret it as color-indexed
+
+If you are still having issues, feel free to ask for help in the soh-modding-discussion channel on the HM64 discord server.

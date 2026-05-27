@@ -6,5 +6,6 @@ Modding tricks and techniques for Ship of Harkinian.
 - ### [Custom Dark Link System](./darklink/index.md)
 - ### [Custom Fonts and Translation System](./custom-font.md)
 - ### [Fake Specular](./fake-specular/index.mdx)
+- ### [Link Flipbooks](./flipbooks/index.mdx)
 - ### [Flipbook Animations in the Graph Editor](./flipbookanimations/index.mdx)
 - ### [Rigged DLs](./rigged-dls/index.mdx)

@@ -91,7 +91,7 @@ Of all aspects of custom model creation, the most finicky is the "flipbooks" - t
 <img src={child_5} alt="Child 5" width="300" />
 <img src={child_6} alt="Child 6" width="300" />
 :::tip
-If your flipbook texture is working but off-color, make sure the actual PNG file is only 32 bits, not 64.
+For a more in-depth tutorial on setting up flipbooks for your custom character, see the [Link Flipbooks Guide](../mod-tutorials/flipbooks/index.mdx)
 :::
 
 ## HD Textures on Custom Models
