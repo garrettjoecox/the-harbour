@@ -17,7 +17,7 @@ This guide is for exporting custom flipbooks, but if you would rather reuse the 
 
 ## Step 0 - Setup
 
-Each Link has 12 flipbooks textures total--8 eyes and 4 mouths. Before starting, make sure you have all the necessary expressions ready. They should all be separate .png files with the same dimensions. You can find the names and descriptions for all of Link's face textures at the [flipbook table below](#link-flipbook-table). The texture names will be very important for exporting, so keep this open as you work.
+Each Link has 12 flipbooks textures total--8 eyes and 4 mouths. Before starting, make sure you have all the necessary expressions ready. They should all be separate .png files with the same dimensions. You can find the names and descriptions for all of Link's face textures at the [flipbook table below](#link-flipbook-table). The texture names will be very important for exporting, so keep this up as you work.
 
 
 ## Step 1 - Material Setup
@@ -31,12 +31,12 @@ Next, scroll down to where it says "Flipbook Properties" and click "Export Flipb
 
 ## Step 2 - Setting Textures
 
-For each eye texture in the [flipbook table](#link-flipbook-table) for your corresponding Link: Click on "Add Texture" and where it says "Texture Name" copy and paste the name from the spreadsheet. Now set this texture to use the png you set up for this expression (you will likely have to hit "Open" and navigate to where you have the texture stored on your device). You can now hit "Visualize" if you want to check how the expression looks on your model.
+For each eye texture in the [flipbook table](#link-flipbook-table) for your corresponding Link: Click on "Add Texture" and where it says "Texture Name" copy and paste the name from the table. Now set this texture to use the png you set up for this expression (you will likely have to hit "Open" and navigate to where you have the texture stored on your device). You can now hit "Visualize" if you want to check how the expression looks on your model.
 
 <img src={step2} alt="Setting Textures" width="300" />
 
 :::warning
-Your textures will not work in-game unless the names match *exactly* with the spreadsheet. Pay close attention to the fact that the name of the closed-eyes texture says Closed**f**Tex instead of ClosedTex. This is **not** a mistake in the spreadsheet, just one of many typos in the game itself. This is why it is recommended to copy and paste directly from the spreadsheet rather than retyping it yourself. 
+Your textures will not work in-game unless the names match *exactly* with the [table below](#link-flipbook-table). Pay close attention to the fact that the name of the closed-eyes texture says Closed**f**Tex instead of ClosedTex. This is **not** a mistake in the table, just one of many typos in the game itself. This is why it is recommended to copy and paste directly from the table rather than retyping it yourself. 
 :::
 
 
@@ -62,7 +62,7 @@ First, look back through each previous step and ensure you have followed each of
 - Not setting the correct texture reference (`0x08000000` for eyes, `0x09000000` for mouth)
 - Setting the wrong texture size (should match the size of your textures; top number is the number of horizontal pixels and the bottom number is the number of vertical pixels)
 - Using textures too large for fast 64 to pack (generally nothing larger than 64x64)
-- Using the wrong texture names (should match exactly with the names in the spreadsheet, including the 'f' for the eyes-closed texture)
+- Using the wrong texture names (should match exactly with the names in the [flipbook table](#link-flipbook-table), including the 'f' for the eyes-closed texture)
 - Exporting on Array Mode instead of Individual
 - Textures are off color - make sure the actual image file is 32-bit, not 64
 - Not properly setting a TLUT name when using a Color-Indexed format - The full path of the TLUT should be placed in the "Palette Reference" box
