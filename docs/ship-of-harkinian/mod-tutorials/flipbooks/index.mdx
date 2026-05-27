@@ -3,7 +3,6 @@ import step2 from "./step2.png"
 import step3a from "./step3a.png"
 import step3b from "./step3b.png"
 
-
 # Creating Flipbooks For a Custom Character
 
 ## What are Flipbooks?
@@ -15,7 +14,7 @@ This segment will cover how to replace Link's flipbooks specifically, but the gi
 
 ## Step 0 - Setup
 
-Each Link has 12 flipbooks textures total--8 eyes and 4 mouths. Before starting, make sure you have all the necessary expressions ready. They should all be separate .png files with the same dimensions. You can find the names and descriptions for all of Link's face textures at https://docs.google.com/spreadsheets/d/1Yc3b-BRSnnCEPQSKtQKSEdi5oodFSx7bx8zJ05yMhH8/edit?gid=1922966857#gid=1922966857. The texture names will be very important for exporting, so keep this open as you work.
+Each Link has 12 flipbooks textures total--8 eyes and 4 mouths. Before starting, make sure you have all the necessary expressions ready. They should all be separate .png files with the same dimensions. You can find the names and descriptions for all of Link's face textures at the [flipbook table below](#link-flipbook-table). The texture names will be very important for exporting, so keep this open as you work.
 
 
 ## Step 1 - Material Setup
@@ -29,9 +28,7 @@ Next, scroll down to where it says "Flipbook Properties" and click "Export Flipb
 
 ## Step 2 - Setting Textures
 
-First pull up the flipbook spreadsheet from earlier if you haven't already--we are going to be using the texture names listed in the "SoH Texture Name" column.
-
-For each eye texture in the column: Click on "Add Texture" and where it says "Texture Name" copy and paste the name from the spreadsheet. Now set this texture to use the png you set up for this expression (you will likely have to hit "Open" and navigate to where you have the texture stored on your device). You can now hit "Visualize" if you want to check how the expression looks on your model.
+For each eye texture in the [flipbook table](#link-flipbook-table) for your corresponding Link: Click on "Add Texture" and where it says "Texture Name" copy and paste the name from the spreadsheet. Now set this texture to use the png you set up for this expression (you will likely have to hit "Open" and navigate to where you have the texture stored on your device). You can now hit "Visualize" if you want to check how the expression looks on your model.
 
 <img src={step2} alt="Setting Textures" width="300" />
 
@@ -70,3 +67,35 @@ First, look back through each previous step and ensure you have followed each of
 	- This can be fixed by either using a non color-indexed texture or resizing your texture to be 64x64, as SoH will no longer try to interpret it as color-indexed
 
 If you are still having issues, feel free to ask for help in the soh-modding-discussion channel on the HM64 discord server.
+
+
+# Link Flipbook Table
+
+| Directory | Texture Name | Description |
+|-----------|--------------|-------------|
+| objects/object_link_child | gLinkChildEyesOpenTex | Eyes open |
+| objects/object_link_child | gLinkChildEyesHalfTex | Eyes half-open (mid-blink) |
+| objects/object_link_child | gLinkChildEyesClosedfTex | Eyes closed |
+| objects/object_link_child | gLinkChildEyesRollRightTex | Eyes facing to the RIGHT of the image |
+| objects/object_link_child | gLinkChildEyesRollLeftTex | Eyes facing to the LEFT of the image |
+| objects/object_link_child | gLinkChildEyesUnk1Tex | Eyes looking down |
+| objects/object_link_child | gLinkChildEyesUnk2Tex | Eyes closed hard / wincing |
+| objects/object_link_child | gLinkChildEyesShockTex | Eyes wide open |
+| objects/object_link_child | gLinkChildMouth1Tex | Mouth closed |
+| objects/object_link_child | gLinkChildMouth2Tex | Mouth half-open |
+| objects/object_link_child | gLinkChildMouth3Tex | Mouth open |
+| objects/object_link_child | gLinkChildMouth4Tex | Mouth smiling |
+
+| objects/object_link_child | gLinkAdultEyesOpenTex | Eyes open |
+| objects/object_link_child | gLinkAdultEyesHalfTex | Eyes half-open (mid-blink) |
+| objects/object_link_child | gLinkAdultEyesClosedfTex | Eyes closed |
+| objects/object_link_child | gLinkAdultEyesRollRightTex | Eyes facing to the RIGHT of the image |
+| objects/object_link_child | gLinkAdultEyesRollLeftTex | Eyes facing to the LEFT of the image |
+| objects/object_link_child | gLinkAdultEyesUnk1Tex | Eyes looking down |
+| objects/object_link_child | gLinkAdultEyesUnk2Tex | Eyes closed hard / wincing |
+| objects/object_link_child | gLinkAdultEyesShockTex | Eyes wide open |
+| objects/object_link_child | gLinkAdultMouth1Tex | Mouth closed |
+| objects/object_link_child | gLinkAdultMouth2Tex | Mouth half-open |
+| objects/object_link_child | gLinkAdultMouth3Tex | Mouth open |
+| objects/object_link_child | gLinkAdultMouth4Tex | Mouth smiling |
+
