@@ -17,16 +17,16 @@ This guide is for exporting custom flipbooks, but if you would rather reuse the 
 
 ## Step 0 - Setup
 
-Each Link has 12 flipbooks textures total--8 eyes and 4 mouths. Before starting, make sure you have all the necessary expressions ready. They should all be separate .png files with the same dimensions. You can find the names and descriptions for all of Link's face textures at the [flipbook table below](#link-flipbook-table). The texture names will be very important for exporting, so keep this up as you work.
+Each Link has 12 flipbooks textures total--8 eyes and 4 mouths. Before starting, make sure you have all the necessary expressions ready. Each eye texture should be of the same dimensions and each mouth texture should be of the same dimensions. Each texture should be its own .png file. You can find the names and descriptions for all of Link's face textures at the [flipbook table below](#link-flipbook-table). The texture names will be very important for exporting, so keep this up as you work.
 
 
 ## Step 1 - Material Setup
 
-Go to the eye material for your player model, and make sure you have a texture set for the eyes (best practice is to just use the neutral eyes-open texture). If you are using a Color-Indexed format, make sure you set your desired number of colors now; you can ignore the TLUT name for now. Underneath "Set Texture" select "Use Texture Reference" and in the box type `0x08000000` as your texture reference. This is what tells the game to look for Link's eye textures.  Set the texture size to match the dimensions of your eye textures. If you are using a Color-Indexed format you may now input your desired TLUT path "Palette Reference" box. Note that unlike normal the **entire path** of the TLUT must be typed in, not just the name (ie `objects/object_link_boy/gEyesTLUT` instead of `gEyesTLUT`).
+Go to the eye material for your player model, and make sure you have a texture set for the eyes (best practice is to just use the neutral eyes-open texture). If you are using a Color-Indexed format, make sure you set your desired number of colors now; you can ignore the TLUT name for now. Underneath "Set Texture" select "Use Texture Reference" and in the box type `0x08000000` as your texture reference. This is what links the eye textures to this material. Set the texture size to match the dimensions of your eye textures. If you are using a Color-Indexed format you may now input your desired TLUT path in the "Palette Reference" box. Note that the **entire path** of the TLUT must be typed in, not just the name (ie `objects/object_link_boy/gEyesTLUT` instead of just `gEyesTLUT`).
 
 <img src={step1} alt="Texture Reference" width="300" />
 
-Next, scroll down to where it says "Flipbook Properties" and click "Export Flipbook Textures 0".  Set the Export Mode to Array if it is not already and type in a name for the array (doesn't really matter what you put so long as it's unique).  Now switch the Export Mode to Individual.
+Next, scroll down in your material settings to where it says "Flipbook Properties" and click "Export Flipbook Textures 0". Set the Export Mode to Array if it is not already and type in a name for the array (doesn't really matter what you put so long as it's unique). Now switch the Export Mode to Individual.
 
 
 ## Step 2 - Setting Textures
@@ -42,7 +42,7 @@ Your textures will not work in-game unless the names match *exactly* with the [t
 
 ## Step 3 - Mouth
 
-Repeat Steps 1 and 2, but when inputting the Texture Reference use `0x09000000` instead. This tells the game where to look for Link's mouth textures. Other than that, all steps are the same, just with the mouth textures and names rather than the eyes.
+Repeat Steps 1 and 2, but when inputting the Texture Reference use `0x09000000` instead. Just like with the eyes, this is what links the mouth textures to this material. Other than that, all steps are the same, just with your mouth textures and names rather than the eyes. Also use the dimensions of the mouth textures when inputting the texture size.
 
 <img src={step3a} alt="Mouth Reference" width="300" />
 <img src={step3b} alt="Mouth Textures" width="300" />
@@ -60,12 +60,12 @@ If something looks wrong, please refer to the next step.
 First, look back through each previous step and ensure you have followed each of them exactly. The most common issues tend to be:
 - Not setting a texture before checking "Set Texture Reference"
 - Not setting the correct texture reference (`0x08000000` for eyes, `0x09000000` for mouth)
-- Setting the wrong texture size (should match the size of your textures; top number is the number of horizontal pixels and the bottom number is the number of vertical pixels)
+- Setting the wrong texture size (should match the size of the corresponding textures; top number is the number of horizontal pixels and the bottom number is the number of vertical pixels)
 - Using textures too large for fast 64 to pack (generally nothing larger than 64x64)
 - Using the wrong texture names (should match exactly with the names in the [flipbook table](#link-flipbook-table), including the 'f' for the eyes-closed texture)
-- Exporting on Array Mode instead of Individual
-- Textures are off color - make sure the actual image file is 32-bit, not 64
-- Not properly setting a TLUT name when using a Color-Indexed format - The full path of the TLUT should be placed in the "Palette Reference" box
+- Exporting on Array Mode instead of Individual - Always make sure your flipbooks are set to Individual mode before exporting
+- Textures are off-color - make sure the actual image file is 32-bit, not 64
+- Not properly setting a TLUT name when using a Color-Indexed format - The *full path* of the TLUT should be placed in the "Palette Reference" box
 - Not properly setting the number of colors when using a Color-Indexed format - Uncheck "Set Texture Reference" and set the number of colors in the "Color Count" box. Then re-check the "Set Texture Reference" box
 - Colors being corrupted when using RGBA-16 - We still don't fully understand *why* this happens, but it seems to be fixed by resizing your textures to be 64x64
 
@@ -74,7 +74,7 @@ If you are still having issues, feel free to ask for help in the soh-modding-dis
 
 ## Vanilla Flipbooks
 
-Navigate to the material for your eyes and set your texture to something with the same dimensions (64x32) as the vanilla eyes (I recommend just using the eyes-open texture from decomp to avoid any potential issues). Next, change your texture format to "Color-Indexed 8-Bit" if it is not already and make sure the Color Count is 255.  Now check the "Set Texture Reference" box and set the texture reference to `0x08000000` and the texture size to 64 and 32 respectively. In the palette reference box, enter `objects/object_link_boy/gLinkAdultHeadTLUT` if doing Adult Link or `objects/object_link_child/gLinkChildSkinTLUT` if doing Child Link.
+Navigate to the material for your eyes and set your texture to something with the same dimensions (64x32) as the vanilla eyes (I recommend just using the eyes-open texture from decomp to avoid any potential issues). Next, change your texture format to "Color-Indexed 8-Bit" if it is not already and make sure the Color Count is 255. Now check the "Set Texture Reference" box and set the texture reference to `0x08000000` and the texture size to 64 and 32 respectively. In the palette reference box, enter `objects/object_link_boy/gLinkAdultHeadTLUT` if doing Adult Link or `objects/object_link_child/gLinkChildSkinTLUT` if doing Child Link.
 
 Repeat all the same steps for the mouth, except here the texture reference should be `0x09000000` and the dimensions of the texture are 32x32 (meaning texture size should have 32 in both boxes).
 
