@@ -3,7 +3,7 @@
 When making a custom model, either to save space or to support texture packs, you might want to reference textures that already exist in the game. This guide assumes you already have the Ocarina of Time decompilation set up and know the basics of how to make a model mod for Ship of Harkinian.
 
 :::note
-This guide is specifically for using textures from Ocarina of Time, but if you would rather use textures from Majora's Mask, proceed to [this section of the guide](#majora's-mask-textures) instead.
+This guide is specifically for using textures from Ocarina of Time, but if you would rather use textures from Majora's Mask, proceed to [this section of the guide](#majoras-mask-textures) instead.
 :::
 
 ## Step 1 - Setup
