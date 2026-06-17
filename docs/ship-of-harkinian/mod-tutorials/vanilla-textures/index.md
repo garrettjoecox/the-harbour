@@ -38,7 +38,9 @@ Now go back to Blender and set your desired material to use your newly renamed t
 
 If your texture is color-indexed (either Color Index 8-Bit or Color Index 4-Bit), move back to the [spreadsheet](https://docs.google.com/spreadsheets/d/127TlFH2p7lgPxhMWCXA5gT2jdv7KtnmcObpHG-WYCgc/edit?usp=sharing) and copy the name in the "Corresponding TLUT" column for your texture, move back into Blender, and paste the name into the "TLUT Name" box (Sources Tab in your material properties) for your material. Then move back to the spreadsheet and copy the number in the "Color Count" column into the "Color Count" box back in Blender.
 
-Finally, check the box labeled "Is Vanilla Texture?". This will prevent the texture from actually exporting.
+Next, check the box labeled "Is Vanilla Texture?". This will prevent the texture from actually exporting.
+
+Finally, in the box labeled "Internal Path:", enter the object path of the texture you are using, consisting of "objects/" followed by the object name specified in the texture spreadsheet. For example, if I wanted to use gHilite1Tex I would enter "objects/gameplay_keep". This tells the game where it can find your desired texture.
 
 
 ## Step 4 - Repeating
