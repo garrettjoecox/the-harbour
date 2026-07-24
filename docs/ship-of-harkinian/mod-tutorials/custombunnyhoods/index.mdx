@@ -11,7 +11,6 @@ import image6 from "./image6.jpg"
 <img src={image4} alt="Funni glorp hood" width="1000" />
 </p>
 
-
 :::note
 When I've made my bunnyhoods I've used  Blender 4.1 with the HM64 2.30 fork of Fast64 I don't know if that info matters but it may be helpful to someone. 
 :::
@@ -25,6 +24,12 @@ Like any rigged DL, you need to make sure there's vertices assigned to each bone
 The vanilla bunny hood textures, regardless of custom model seems to get corrupted while wearing an edited Goron bracelet, I'm not sure why.
 
 Edited bunny hoods with their own materials seem to be ok with Goron bracelets
+
+
+This guide won’t cover making the actual mesh, just the rigging, weighting, dl editing and getting it into game, though I will recommend when making your mesh I’d advise you not to have any vertices between the base and tip as we only have two bones to work with so we can’t have smooth transitions between the head the ear
+Also Like any rigged DL, you also need to make sure there's vertices assigned to each bone, I tend to make tiny faces at each bone origin assigned to that bone
+The vanilla bunny hood *textures* regardless of custom model seems to get corrupted while wearing an edited Goron bracelet, I'm not sure why
+edited bunny hoods with their own materials seem to be ok with Goron bracelets
 
 The entire bunny hood vanilla mesh seems very strange and broken I do not recommend using it as a base, it's materials seem odd too
 
@@ -58,14 +63,12 @@ Now add another bone for the other ear, you can mirror the one you have or dupli
 
 <img src={image1} alt="bone direction and rolls" width="1000" />
 
-
 Now rename the bones 
-- `bone021_gLinkChildLeftBunnyEarLimb` for the left ear
-- `bone022_gLinkChildRightBunnyEarLimb` for the right ear
+`bone021_gLinkChildLeftBunnyEarLimb` for the left ear
+`bone022_gLinkChildRightBunnyEarLimb` for the right ear
 
 I don't think the names matter but I'm using this, 
-if you're wondering, I start at 021 as link's bones end at 20 so any new ones need to start after 20
-
+if you're wondering I start at 021 as link's bones end at 20 so any new ones need to start after 20
 
 
 # Weight Painting
@@ -92,11 +95,7 @@ To check if the weights are good, stay in edit mode, unselect all vertices, pick
 
 We should be good to export it now, select the skeleton
 
-
-
-<img src={image3} alt="Weight painted ears" width="1000" />
-
-
+<img src={image3} alt="folder paths" width="1000" />
 
 :::note
 Sometimes the Microcode you use to export can create issues if you're having issues try a different microcode f3dex/lx or f3dex2, both of them seem good, f3dex3 is not supported in SOH.
@@ -120,7 +119,9 @@ Make sure the bunny hood exports to it's own folder and not overwriting anything
 This is the scary part but it's not hard! If you done the rigged-dls tutorial this is a very similar process
 We need to leave Blender and make our DL inside the object_link_child folder, not in the folder we exported our bunny hood to
 
-Make a new text file in the `objects/object_link_child` folder and save it as `gLinkChildBunnyHoodDL` **MAKE SURE IT HAS NO EXTENSION, This name is very important** as it refers to the actual bunny hood in the game's files, if you have the wrong name nothing will show up in game
+
+Make a new text file in the `objects/object_link_child` folder and save it as `gLinkChildBunnyHoodDL` **MAKE SURE IT HAS NO EXTENSION**
+**This name is very important** as it refers to the actual bunny hood in the game's files, if you have the wrong name nothing will show up in game
 
 Copy this into the file
 
