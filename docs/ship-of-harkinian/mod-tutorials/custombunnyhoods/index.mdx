@@ -1,52 +1,57 @@
-import image1 from "./image1.png"
-import image2 from "./image2.png"
-import image3 from "./image3.png"
-import image4 from "./image4.png"
-import image5 from "./image5.png"
-import image6 from "./image6.png"
+import image1 from "./image1.jpg"
+import image2 from "./image2.jpg"
+import image3 from "./image3.jpg"
+import image4 from "./image4.jpg"
+import image5 from "./image5.jpg"
+import image6 from "./image6.jpg"
 
 # Custom Bunny Hoods
 
 <img src={image4} alt="Funni glorp hood" width="1000" />
 
 :::note
-When I've made my bunny hoods I've using Blender 4.1 with the HM64 2.30 fork of Fast64 I don't know if that info matters but it may be helpful to someone 
+When I've made my bunnyhoods I've used  Blender 4.1 with the HM64 2.30 fork of Fast64 I don't know if that info matters but it may be helpful to someone. 
 :::
 
 Custom bunny hoods are luckily not cbt to make! The trick is editing the DL file to point to two very special matrix's that the bunny hood needs
 
-This guide wont cover making the actual mesh, just the rigging, weighting, dl editing and getting it into game, though I will recommend when making your mesh I’d advise you not to have any vertices between the base and tip as we only have two bones to work with so we can’t have smooth transitions between the head the ear
+This guide won’t cover making the actual mesh, just the rigging, weighting, dl editing and getting it into game, though I will recommend when making your mesh I’d advise you not to have any vertices between the base and tip as we only have two bones to work with so we can’t have smooth transitions between the head the ear
 Also Like any rigged DL, you also need to make sure there's vertices assigned to each bone, I tend to make tiny faces at each bone origin assigned to that bone
+The vanilla bunny hood *textures* regardless of custom model seems to get corrupted while wearing an edited Goron bracelet, I'm not sure why
+edited bunny hoods with their own materials seem to be ok with Goron bracelets
+The entire bunny hood vanilla mesh seems very strange and broken I do not recommend using it as a base, it's materials seem odd too
+
 
 
 # Material Info
 
 Give the base any material like you would any other object double check it's format is RGBA 16-bit 
+
 :::note
-**But for the Ears THIS IS VERY IMPORTANT **
-The vertices that are weighted to each ears/bits that jiggle, should only have 1 Material, else your mesh will explode apart and not work right 
+**Regarding the ears THIS IS VERY IMPORTANT **
+The vertices that are weighted to each ears/bits that jiggle, should only have 1 Material, else your mesh will explode apart and not work right.
 :::
 You can have multiple materials on your mesh but only have one per ear bone
 
 
 # Skeleton editing
 
-We gotta add the extra bones to the skeleton for each ear to work from so select Link's skeleton in object mode, and duplicate it with ctrl D
-Rename both the armature object (orange man icon) and the Armature (The green man that's a child) they can share a name, in my case it's `Bunnyskell`
+For each ear to work we’ve got to add the extra bones to the skeleton, select Link's skeleton in object mode, and duplicate it with Ctrl+D
+Rename both the armature object (orange man icon) and the Armature (The green man) they can share a name, in my case it's `Bunnyskell`
 
 <img src={image2} alt="Dupped renamed Skeleton" width="700" />
 
-Either copy the hat bone or go into edit mode an add a bone(length don't matter I tend to keep mine small or close to links other bones), make sure the bone does not have "Connected" ticked then make the bone a child of Links head (bone010_gLinkChildHeadLimb)
+Either copy the hat bone or go into edit mode an add a bone (length don't matter I tend to keep mine small or close to Link’s other bones), make sure the bone does not have "Connected" ticked then make that bone a child of Link’s head bone `bone010_gLinkChildHeadLimb`
 
-Then position it at the base of one of your ears, The rotation of the bones matters as does their roll value
+Position the new bone at the base of one of your ears, The rotation of the bones matters as does their roll value
 	Rotate it so the small part/tail of bone is facing in the same direction as link is facing in
-	Their X axis should point up and the Z axis should point to their left, Y should be pointing in the direction of the bone
+	The bone’s X axis should point up and the Z axis should point to their left, Y should be pointing in the direction of the bone
 
-Now add another bone for the other ear, you can mirror the one you have, dupe it one and move it etc, add it however you want just make sure the rotations are the same
+Now add another bone for the other ear, you can mirror the one you have or duplicate it and move it etc, add it however you want just make sure the rotations are the same
 
-rename the bones 
-`bone021_gLinkChildLeftBunnyEarLimb for the left ear`
-`bone022_gLinkChildRightBunnyEarLimb for the right ear`
+Now rename the bones 
+`bone021_gLinkChildLeftBunnyEarLimb` for the left ear
+`bone022_gLinkChildRightBunnyEarLimb` for the right ear
 
 I don't think the names matter but I'm using this, 
 if you're wondering I start at 021 as link's bones end at 20 so any new ones need to start after 20
@@ -64,7 +69,7 @@ With the bunny hood you only want the tip of the ears to be weighted to each ear
 
 Also you need to make sure you have some mesh(not the bunny hood itself) weighted to each bone, a single vert or single face at the origin of every other bone should suffice
 
-To check if the weights are good stay in edit mode, unselect all verts pick a bone in the list then press Select to see what verts have been weighted
+To check if the weights are good, stay in edit mode, unselect all vertices, pick a bone in the data vertex group list then press “Select” to see what vertices have been weighted
 
 <img src={image5} alt="Weight painted ears" width="1000" />
 
@@ -76,7 +81,7 @@ To check if the weights are good stay in edit mode, unselect all verts pick a bo
 We should be good to export it now, select the skeleton
 
 :::note
-Sometimes the Microcode you use to export can create issues if you're having issues try a different microcode f3dex/lx or f3dex2, both of them seem good, f3dex3 is not supported in SHO
+Sometimes the Microcode you use to export can create issues if you're having issues try a different microcode f3dex/lx or f3dex2, both of them seem good, f3dex3 is not supported in SOH.
 :::
 
 
@@ -85,14 +90,14 @@ make sure "Use Custom Path" is ticked I don't have "Optimize" turned on(I have n
 I don't have "Use Custom Filename" on either
 
 For the folder name, I tend to use my skeleton name so in my case it's `Bunnyskell`
-For the Asset Include Path, **don't use any existing paths**, ie don't use something like objects/object_link_child, objects/object_link_boy_hoverboots or objects/object_link_boy_goron etc
+For the Asset Include Path, **don't use any existing paths**, i.e. don't use something like objects/object_link_child, objects/object_link_boy_hoverboots or objects/object_link_boy_goron etc
 Other than that restriction you can set whatever name you want as long as it's in the objects sub folder, in my case it's objects/bunnyears
-Path would be where your working directory is	
+“Path” would be where your working directory is	
 
-Make sure it exports to it's own folder and not overwriting anything
+Make sure the bunny hood exports to it's own folder and not overwriting anything else
 
 
-# Dl editing
+# Display List editing
 
 This is the scary part but it's not hard! If you done the rigged-dls tutorial this is a very similar process
 We need to leave Blender and make our DL inside the object_link_child folder, not in the folder we exported our bunny hood to
@@ -126,19 +131,15 @@ bone022_gLinkChildRightBunnyEarLimb
 bone021_gLinkChildLeftBunnyEarLimb
 to whatever you had your ear bones called **MAKE** sure they have `_mesh_layer_Opaque` as a prefix like in the example
 
-The big thing with the bunny hood here is assigning these bones to these specific matrixes 
-`0x0B000000` and `0x0B000040` these are very special matrixes that are only used by the bunny hood, this is what gives the ears "physics" 
-they only work with the bunny hood equipped though so can't really add physics to any other body parts without the bunny hood equipped
+The big thing with the bunny hood is assigning these bones to these specific matrixes 
+`0x0B000000` and `0x0B000040` these are very special matrixes that are only used by the bunny hood, this is what gives the ears "physics", they only work when the bunny hood is equipped, so you can't really add physics to any other body parts without the bunny hood being active
 
-Also most DLs use the parameter `G_MTX_LOAD` but bunnyhood's ears need to have the `G_MTX_MUL` parameter
+Also most DLs use the parameter `G_MTX_LOAD` but the bunny hood's ears need to have the `G_MTX_MUL` parameter
 
-Save your DL and double check **it does not have an extension**
+Save your DL and double check in windows explorer that **it does not have an extension**
 
 Once done package your mod like you would normally and try it out in game!
 
 
 <img src={image6} alt="All done and in game" width="1000" />
 
-The Vanilla Bunny hood TEXTURES regardless of custom model seems to get corrupted while wearing an edited Goron bracelet, I'm not sure why
-edited bunny hoods with their own materials and resaved vanilla textures seem ok
-The entire Bunny hood vanilla mesh seems very strange and broken I do not recommend using it as a base, it's materials seem odd too
