@@ -106,26 +106,6 @@ Enemies that utilise the "body break" system:
 
 Dev comments: https://github.com/HarbourMasters/Shipwright/pull/3436#issuecomment-2252886376
 
-## Flipbooks
-
-Of all aspects of custom model creation, the most finicky is the "flipbooks" - the swapping textures used for animating character faces. Link is obviously the most complicated, so here are the exact names and settings required. Note that the texture dimensions can differ from the ones shown in the screencaps, but must be set to the correct dimensions for your texture files.
-
-<img src={adult_1} alt="Adult 1" width="300" />
-<img src={adult_2} alt="Adult 2" width="300" />
-<img src={adult_3} alt="Adult 3" width="300" />
-<img src={adult_4} alt="Adult 4" width="300" />
-<img src={adult_5} alt="Adult 5" width="300" />
-<img src={adult_6} alt="Adult 6" width="300" />
-<img src={child_1} alt="Child 1" width="300" />
-<img src={child_2} alt="Child 2" width="300" />
-<img src={child_3} alt="Child 3" width="300" />
-<img src={child_4} alt="Child 4" width="300" />
-<img src={child_5} alt="Child 5" width="300" />
-<img src={child_6} alt="Child 6" width="300" />
-:::tip
-For a more in-depth tutorial on setting up flipbooks for your custom character, see the [Link Flipbooks Guide](../mod-tutorials/flipbooks/index.mdx)
-:::
-
 ## HD Textures on Custom Models
 
 To put HD textures on custom models, you must first create the mod archive with SD textures, then extract the mod archive as you would to create a vanilla texture mod, following the process to unpack your mod archive instead of the source asset archive.
