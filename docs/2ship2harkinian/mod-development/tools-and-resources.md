@@ -8,7 +8,7 @@ Converts WAV files into the format 2Ship expects for custom audio samples. Despi
 
 **Download:** https://github.com/Jameriquiah/SoH-AudioTool/releases
 
-See the [Ship of Harkinian audio modding guide](../../ship-of-harkinian/mod-development/audio-modding.md) for the full sample replacement workflow, which is largely the same on 2Ship.
+See the [Ship of Harkinian audio modding guide](../../ship-of-harkinian/mod-tutorials/audio-modding/index.mdx) for the full sample replacement workflow, which is largely the same on 2Ship.
 
 :::warning
 This is ONLY for audio samples, not streamed audio. The sample rate must match the sample you're replacing, or else you will get slowed down or sped up audio.

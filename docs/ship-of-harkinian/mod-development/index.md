@@ -7,8 +7,8 @@ Code however, is not stored in the o2rs, so we do not have the ability to suppor
 ### Quick Start - I want to mod:
 
 - [**Text**](./text-replacement.md)!
-- [**Textures**](./texture-replacement.md)!
+- [**Textures**](../mod-tutorials/texture-replacement/index.mdx)!
 - [**Models**](./model-replacement.md)!
 - [**Animations**](./animation-modding.md)!
-- [**Audio**](./audio-modding.md)!
+- [**Audio**](../mod-tutorials/audio-modding/index.mdx)!
 - [**Code**](./code-modding.md)!
