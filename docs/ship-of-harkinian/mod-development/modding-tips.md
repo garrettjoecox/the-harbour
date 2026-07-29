@@ -154,7 +154,8 @@ This can easily be handled within Fast64 in the DL Exporter tab, simply add a ne
 <img src={matrixpath} alt="Matrix Path" width="500" />
 
 The original matrices these DL's use in vanilla should be pretty self-explanatory but just incase:
-```gLinkAdultLeftIronBootDL - Left Foot
+```
+gLinkAdultLeftIronBootDL - Left Foot
 gLinkAdultRightIronBootDL - Right Foot
 gLinkAdultLeftHoverBootDL - Left Foot
 gLinkAdultRightHoverBootDL - Right Foot
@@ -165,6 +166,7 @@ gLinkAdultLeftGauntletPlate3DL - Left Hand
 gLinkAdultRightGauntletPlate1DL - Right Arm
 gLinkAdultRightGauntletPlate2DL - Right Hand
 gLinkAdultRightGauntletPlate3DL - Right Hand
+```
 
 :::tip
 You can also use this feature to change which bone a specific DL is anchored to, even bones that do not normally require a matrix call. So for example, you can use this to turn something like a mask, into something that goes on the torso.
