@@ -37,15 +37,15 @@ const GameList: GameItem[] = [
     imagePath: '/img/games/marorasmask.webp',
     ports: [
       {
+        name: 'Zelda 64: Recompiled',
+        tags: ['Mod Support', 'Enhanced Graphics', 'Widescreen', 'Native PC'],
+        downloadsUrl: 'https://github.com/Zelda64Recomp/Zelda64Recomp/releases',
+      },
+      {
         name: '2 Ship 2 Harkinian',
         tags: ['Mod Support', 'Enhanced Graphics', 'Widescreen', 'Native PC'],
         docsPath: '/docs/2ship2harkinian',
         downloadsUrl: 'https://github.com/HarbourMasters/2ship2harkinian/releases',
-      },
-      {
-        name: 'Zelda 64: Recompiled',
-        tags: ['Mod Support', 'Enhanced Graphics', 'Widescreen', 'Native PC'],
-        downloadsUrl: 'https://github.com/Zelda64Recomp/Zelda64Recomp/releases',
       },
     ],
   },
