@@ -2,7 +2,7 @@
 sidebar_position: 5
 ---
 
-import mtx_bytes from "./img/mtx_bytes.png"
+import mtx_bytes from "./mtx_bytes.png"
 
 # Vertex Snapping Fix
 Particularly small models (namely GI/GetItem models) often run into a problem where they require better vertex precision than their small size can offer, since at that scale the difference between different vertex positions becomes smaller than the N64 can accurately represent, so they have to get truncated to the nearest available position, causing a sort of warping effect on the model.

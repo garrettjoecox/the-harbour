@@ -2,8 +2,8 @@
 sidebar_position: 4
 ---
 
-import segmentc from "./img/segmentc.png"
-import culloptions from "./img/culloptions.png"
+import segmentc from "./segmentc.png"
+import culloptions from "./culloptions.png"
 
 # Segment Calls
 Segment Calls are used to tell the game to apply a particular effect to your mesh depending on the model you're replacing. For example, Dark Link calls Segment C for its fade-in effect.
