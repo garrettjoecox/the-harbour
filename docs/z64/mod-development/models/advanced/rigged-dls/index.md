@@ -3,7 +3,7 @@ import image2 from "./image2.png"
 
 # Rigged DLs
 
-This technique lets you replace any of Link's object Display Lists (DLs) with a fully rigged custom model that deforms across multiple bones — rather than being locked to a single bone like a [static DL](../attaching-static-dl/index.mdx).
+This technique lets you replace any of Link's object Display Lists (DLs) with a fully rigged custom model that deforms across multiple bones — rather than being locked to a single bone like a [static DL](../attaching-static-dls/index.md).
 
 The guide uses the Iron Boots as an example, but this works with any of Link's DLs including masks, swords, shields, and held items.
 
