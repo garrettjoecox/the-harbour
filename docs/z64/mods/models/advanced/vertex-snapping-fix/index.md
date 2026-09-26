@@ -17,7 +17,7 @@ There is, however, a solution to this. If you would like an in-depth explanation
 
 At the time of writing this, `gGiScaleMtx` is built into the most recent build of 2ship and in the nightly versions of SoH, meaning that if you plan to release your mod for either of those versions you do not have to include the actual file in your mod and can stop here. But if you would rather your mod be compatible with previous versions as well, you can download the `gGiScaleMtx` file below and include it in the appropriate directory in your mod.
 
-Download: <a href="./gGiScaleMtx" download>gGiScaleMtx</a>
+Download: <a href={useBaseUrl('./gGiScaleMtx')} download>gGiScaleMtx</a>
 
 ## In-depth Explanation
 It's important to understand exactly what the issue was. Basically GI models for whatever reason are stored extremely tiny in-game, to the point where they hit the limit of the N64's vertex precision levels. You can even see this in Blender when importing one and snapping the camera to orthographic view on an axis. You can see how every vertex fits nicely on a grid. Other models do not have this issue because while they are confined to the very same grid, they are significantly larger so that grid becomes essentially unnoticeable.
