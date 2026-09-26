@@ -55,7 +55,7 @@ Create a new text file and paste in this base template:
 
 Each bone your mesh uses needs **two lines** inserted before `<PipeSync/>`:
 
-1. A **`Matrix Path`** line — tells the DL which bone to attach to (see the [bone reference table](../attaching-static-dl/index.mdx#bone-reference-table))
+1. A **`Matrix Path`** line — tells the DL which bone to attach to (see the [bone reference table](../attaching-static-dls/index.md#bone-reference-table))
 2. A **`CallDisplayList`** line — tells the DL which mesh part to load on that bone
 
 The `CallDisplayList` format is:
