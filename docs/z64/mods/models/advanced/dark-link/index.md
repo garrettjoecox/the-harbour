@@ -1,3 +1,7 @@
+---
+sidebar_position: 7
+---
+
 # Custom Dark Link System
 
 Mods that use, require, or build on the Custom Dark Link system are encouraged. If you publish a Dark Link equipment mod, it is recommended to link to a mod using this system on your mod page so users know what they need.

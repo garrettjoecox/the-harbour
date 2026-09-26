@@ -1,3 +1,7 @@
+---
+sidebar_position: 1
+---
+
 import step1 from "./step1.png"
 import step2 from "./step2.png"
 import step3a from "./step3a.png"

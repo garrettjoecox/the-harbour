@@ -1,4 +1,3 @@
-\# Text Replacement
-
+# Text Replacement
 \[modding info here]
 

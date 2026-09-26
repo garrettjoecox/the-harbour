@@ -1,3 +1,7 @@
+---
+sidebar_position: 8
+---
+
 # Using Vanilla Textures
 
 When making a custom model, either to save space or to support texture packs, you might want to reference textures that already exist in the game. This guide assumes you already have the Ocarina of Time decompilation set up and know the basics of how to make a model mod for Ship of Harkinian.

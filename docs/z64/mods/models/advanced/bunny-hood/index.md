@@ -1,3 +1,7 @@
+---
+sidebar_position: 6
+---
+
 import image1 from "./image1.JPG"
 import image2 from "./image2.JPG"
 import image3 from "./image3.JPG"

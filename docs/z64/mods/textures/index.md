@@ -1,4 +1,3 @@
-\# Texture Replacement
-
+# Texture Replacement
 \[modding info here]
 

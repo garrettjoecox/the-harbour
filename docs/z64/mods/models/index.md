@@ -1,3 +1,7 @@
+---
+sidebar_position: 1
+---
+
 # Model Replacement
 Replacing 3d models is one of the primary ways to mod the ships, and is also one of the most involved. As such, the following tutorials are categorized by their difficulty level.
 Please note that information about the Prelude editor is beyond the scope of these guides, but you can find more information about it on the [official Prelude site](https://prelude.roborich.com/)

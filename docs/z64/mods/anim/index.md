@@ -1,4 +1,3 @@
-\# Animation Replacement
-
+# Animation Replacement
 \[modding info here]
 
