@@ -1,5 +1,7 @@
 # Compatible Glitches
 
+TODO: Add SoH Glitches
+
 This is intended to be the list of all glitches that are either incompatible with 2Ship entirely, or incompatible with specific enhancements. If a glitch is not present on this list then you can assume it is fully compatible with 2ship, if you find otherwise please let us know so we can update this list.
 
 ## Fully Incompatible:
