@@ -110,16 +110,6 @@ const GameList: GameItem[] = [
   },
 ];
 
-// Fisher-Yates shuffle algorithm
-function shuffleArray<T>(array: T[]): T[] {
-  const shuffled = [...array];
-  /*for (let i = shuffled.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1));
-    [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
-  }*/
-  return shuffled;
-}
-
 function PortBadge({tag}: {tag: PortTag}) {
   return <span className={styles.portBadge}>{tag}</span>;
 }
@@ -188,19 +178,11 @@ function GameCard({game}: {game: GameItem}) {
 }
 
 export default function HomepageFeatures(): ReactNode {
-  // Shuffle ports for each game on page load to prevent bias
-  const shuffledGameList = useMemo(() => {
-    return GameList.map(game => ({
-      ...game,
-      ports: shuffleArray(game.ports),
-    }));
-  }, []);
-
   return (
     <section className={styles.features}>
       <div className="container">
         <div className="row">
-          {shuffledGameList.map((game, idx) => (
+          {GameList.map((game, idx) => (
             <GameCard key={idx} game={game} />
           ))}
         </div>
