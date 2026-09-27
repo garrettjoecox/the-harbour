@@ -28,4 +28,5 @@ After you're finished with the introduction, you can then begin with your model 
   - [Custom Bunny Hoods](./advanced/bunny-hood/index.md)
   - [Dark Link Equipment System](./advanced/dark-link/index.md)
   - [Using Vanilla Textures](./advanced/vanilla-textures/index.md)
+  - [Useful Material Setups](./advanced/materials/index.md)
 

@@ -13,3 +13,4 @@ sidebar_position: 3
   - [Custom Bunny Hoods](./bunny-hood/index.md)
   - [Dark Link Equipment System](./dark-link/index.md)
   - [Using Vanilla Textures](./vanilla-textures/index.md)
+  - [Useful Material Setups](./materials/index.md)
