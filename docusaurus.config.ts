@@ -15,14 +15,15 @@ const config: Config = {
   },
 
   // Set the production url of your site here
-  url: 'https://nickel246.github.io',
+  url: 'https://your-docusaurus-site.example.com',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: '/the-harbour/',
+  baseUrl: '/',
 
   // GitHub pages deployment config.
-  organizationName: 'nickel246', // GitHub org/user name.
-  projectName: 'the-harbour', // Repo name.
+  // If you aren't using GitHub pages, you don't need these.
+  organizationName: 'garrettjoecox', // Usually your GitHub org/user name.
+  projectName: 'the-harbour', // Usually your repo name.
 
   onBrokenLinks: 'throw',
 
@@ -51,7 +52,7 @@ const config: Config = {
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            'https://github.com/nickel246/the-harbour/tree/restructure/',
+            'https://github.com/garrettjoecox/the-harbour/tree/main/',
         },
         blog: {
           showReadingTime: true,
@@ -62,7 +63,7 @@ const config: Config = {
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            'https://github.com/nickel246/the-harbour/tree/restructure/',
+            'https://github.com/garrettjoecox/the-harbour/tree/main/',
           // Useful options to enforce blogging best practices
           onInlineTags: 'warn',
           onInlineAuthors: 'warn',
@@ -89,7 +90,7 @@ const config: Config = {
         //   label: 'Tutorial',
         // },
         {
-          href: 'https://github.com/nickel246/the-harbour/tree/restructure',
+          href: 'https://github.com/garrettjoecox/the-harbour',
           label: 'GitHub',
           position: 'right',
         },
@@ -133,7 +134,7 @@ const config: Config = {
     //         },
     //         {
     //           label: 'GitHub',
-    //           href: 'https://github.com/nickel246/the-harbour/tree/restructure',
+    //           href: 'https://github.com/garrettjoecox/the-harbour',
     //         },
     //       ],
     //     },
