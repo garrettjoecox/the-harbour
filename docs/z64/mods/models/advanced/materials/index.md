@@ -1,14 +1,52 @@
+import FakeSpecularExample from "./FakeSpecularExample.webp"
+import image1 from "./image1.png"
+import image2 from "./image2.png"
+import image3 from "./image3.png"
+import image4 from "./image4.png"
+import image5 from "./image5.png"
+import image6 from "./image6.png"
+import Shine32xSoft from "./Shine32xSoft.png"
+
 # Useful Material Setups
 
-## Environment Mapped Shiny Effects
+## Fake Specular
 
-To add a shiny/reflective effect to a mesh:
+Creates a shiny specular highlight on a mesh by layering a second transparent, environment-mapped mesh on top of the original.
 
-1. In edit mode, select the mesh you want a shine on and duplicate it (don't move it)
-2. Create a new material and select **Environment Mapped Transparent** preset
-3. Assign the duplicated mesh to the new material
-4. Import your texture image (use textures with alpha)
-5. In Color Combiner, change Cycle 1 D Alpha from `1` to `Texture 0 Alpha`
-6. In Lower settings (Show Simplified UI disabled), change Render Mode Cycle 2 to `Transparent Decal`
+<img src={FakeSpecularExample} alt="Fake specular effect example" />
 
 
+### 1. Duplicate the mesh
+
+In edit mode, select the mesh you want a shine on and duplicate it. Do not move the duplicate.
+
+<img src={image1} alt="Duplicating the mesh in edit mode" width="1000" />
+
+
+### 2. Assign a new material
+
+Create a new material, select the `Environment Mapped Transparent` preset, and assign it to the duplicated mesh. Import your shine texture — textures with an alpha channel work best.
+
+<img src={image2} alt="Selecting the Environment Mapped Transparent preset" width="1000" />
+<img src={image3} alt="Importing the texture" width="1000" />
+
+:::tip Shine texture
+This is the texture used in this tutorial. A soft radial gradient with alpha works well for this effect.
+
+<img src={Shine32xSoft} alt="Shine32xSoft sample texture" />
+:::
+
+
+### 3. Adjust the Color Combiner
+
+In the Color Combiner, change **Cycle 1 D Alpha** from `1` to `Texture 0 Alpha`.
+
+<img src={image4} alt="Color Combiner before change" width="1000" />
+<img src={image5} alt="Color Combiner after change" width="1000" />
+
+
+### 4. Set the render mode
+
+In the lower settings (make sure **Show Simplified UI** is disabled), change **Render Mode Cycle 2** to `Transparent Decal`.
+
+<img src={image6} alt="Setting render mode to Transparent Decal" width="1000" />
