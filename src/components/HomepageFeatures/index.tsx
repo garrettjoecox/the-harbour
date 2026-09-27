@@ -90,8 +90,8 @@ const GameList: GameItem[] = [
     ports: [
       {
         name: 'Lighthouse',
-        team: 'IsleOPorts',
-        downloadsUrl: 'https://github.com/IsleOPorts/Lighthouse/releases/latest',
+        team: 'Harbour Masters',
+        downloadsUrl: 'https://github.com/HarbourMasters/Lighthouse/releases/latest',
         modpageUrl: 'https://gamebanana.com/games/25172'
       },
     ],
