@@ -25,3 +25,4 @@ SoH and 2Ship support drag-and-drop asset mods (models, textures, text, audio) b
 - ### [Audio Replacement](./mods/audio/index.md)
 - ### [Text Replacement](./mods/text/index.md)
 - ### [Animation Replacement](./mods/anim/index.md)
+- ### [Code Modding (limited)](./code/index.md)
