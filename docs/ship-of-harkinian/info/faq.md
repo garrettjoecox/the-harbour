@@ -5,7 +5,7 @@ sidebar_position: 1
 # F.A.Q.
 
 ## Where can I get a ROM?
-In order to legally acquire a ROM compatible with Ship of Harkinian you need to dump a supported Gamecube disc or N64 cartridge. For more details please consult the [ROM dumping guide](/the-harbour/docs/common/rom-dumping-guide). Please note that piracy is illegal and is not supported or tolerated by the Harbor Masters team.
+In order to legally acquire a ROM compatible with Ship of Harkinian you need to dump a supported Gamecube disc or N64 cartridge. For more details please consult the [ROM dumping guide](/docs/common/rom-dumping-guide). Please note that piracy is illegal and is not supported or tolerated by the Harbor Masters team.
 
 ## Is this legal?
 Yes! The Ship of Harkinian PC port does not contain any copyrighted material and requires players to legally acquire the appropriate game ROM.
