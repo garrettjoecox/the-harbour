@@ -2,7 +2,7 @@
 sidebar_position: 1
 ---
 
-# Home
+# 2Ship2Harkinian
 
 ## General Info and Resources
 - ### [FAQ](./info/faq.md)
