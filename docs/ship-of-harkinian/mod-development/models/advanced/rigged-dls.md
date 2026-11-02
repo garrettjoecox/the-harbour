@@ -1,7 +1,3 @@
----
-sidebar_position: 2
----
-
 import image1 from "/img/zship-modding/models/rigged-dls/image1.png"
 import image2 from "/img/zship-modding/models/rigged-dls/image2.png"
 

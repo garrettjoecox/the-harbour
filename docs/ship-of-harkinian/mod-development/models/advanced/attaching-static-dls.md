@@ -1,7 +1,3 @@
----
-sidebar_position: 3
----
-
 import image1 from "/img/zship-modding/models/attaching-static-dls/image1.png"
 import image2 from "/img/zship-modding/models/attaching-static-dls/image2.png"
 import image3 from "/img/zship-modding/models/attaching-static-dls/image3.png"

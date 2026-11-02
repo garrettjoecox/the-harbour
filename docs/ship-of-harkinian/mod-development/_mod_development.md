@@ -1,5 +1,5 @@
 Ship of Harkinian supports drag-and-drop asset mods (models, textures, text, audio) but not yet code mods. All available documentation on creating mods can be found below.
-- ### [Model Replacement](/docs/ship-of-harkinian/mod-development/models/index.mdx)
+- ### [Model Replacement](/docs/ship-of-harkinian/mod-development/models/index.md)
 - ### [Texture Replacement](/docs/ship-of-harkinian/mod-development/textures.md)
 - ### [Audio Replacement](/docs/ship-of-harkinian/mod-development/audio)
 - ### [Text Replacement](/docs/ship-of-harkinian/mod-development/text/index.md)

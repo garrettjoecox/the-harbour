@@ -1,7 +1,3 @@
----
-sidebar_position: 6
----
-
 import image1 from "/img/zship-modding/models/bunny-hood/image1.JPG"
 import image2 from "/img/zship-modding/models/bunny-hood/image2.JPG"
 import image3 from "/img/zship-modding/models/bunny-hood/image3.JPG"

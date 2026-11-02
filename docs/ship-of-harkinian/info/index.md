@@ -3,7 +3,6 @@ title: "Ship of Harkinian"
 hide_title: True
 sidebar_label: "About"
 description: "The go-to PC Port For The Legend of Zelda: Ocarina of Time"
-sidebar_position: 1
 ---
 
 import ThemedImage from '@theme/ThemedImage';

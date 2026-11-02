@@ -2,7 +2,7 @@ After you're finished with the introduction, you can then begin with your model 
 
 ### Skeleton Replacement
 Replacing models that deform like player models, Npc models, enemy models, etc.
-- [General Skeleton Guide](/docs/2ship2harkinian/mod-development/models/basics/skeletons.mdx) - General guide for replacing skeletons
+- [General Skeleton Guide](/docs/2ship2harkinian/mod-development/models/basics/skeletons.md) - General guide for replacing skeletons
 - [Player Model Guide](/docs/2ship2harkinian/mod-development/models/basics/player-models.md) - Replacing Link's models
 
 ### Static Model Replacement

@@ -1,7 +1,3 @@
----
-sidebar_position: 1
----
-
 import f3d_converter from "/img/zship-modding/models/f3d_converter.png"
 import f64_download from "/img/zship-modding/models/f64_download.png"
 import f64_global from "/img/zship-modding/models/f64_global.png"

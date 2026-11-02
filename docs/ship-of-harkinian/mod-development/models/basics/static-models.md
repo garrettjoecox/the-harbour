@@ -1,7 +1,3 @@
----
-sidebar_position: 2
----
-
 import asset_sheet from "/img/zship-modding/models/dl_asset_sheet.png"
 import importing from "/img/zship-modding/models/dl_importing.png"
 import renaming from "/img/zship-modding/models/dl_renaming.png"

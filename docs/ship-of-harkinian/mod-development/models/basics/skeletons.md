@@ -1,7 +1,3 @@
----
-sidebar_position: 1
----
-
 import asset_sheet from "/img/zship-modding/models/skel_asset_sheet.png"
 import importing from "/img/zship-modding/models/skel_importing.png"
 import unfolding from "/img/zship-modding/models/unfolding.mp4"
@@ -10,6 +6,10 @@ import rest_pose from "/img/zship-modding/models/rest_pose.png"
 
 # Skeleton Replacement
 In this guide we will cover how to replace models attached to skeletons such as character or enemy models.
+
+:::warning
+**This guide is still under construction.  The following information, while useful, does not yet constitute a full guide.**
+:::
 
 :::note
 While this guide applies to all skeletons, if you're specifically looking to make a player model mod (replacing Link), you can find a bespoke player model guide [here](./player-models.md).  Good Luck!
@@ -65,11 +65,8 @@ You have now successfully unfolded your skeleton into a T-pose.
 ## Replacing Skeletons
 With your vanilla skeleton imported and unfolded, take the model you would like to replace it with, and align it best you can.  Technically you could edit the skeleton to match your model, but it is not recommended as it may cause graphical issues as well as affect gameplay.  Instead, it is recommended to **edit your model to match the skeleton**, rather than the other way around.
 
+**TODO**
 
-
-Stubs:
-
-importing w o2r only imports first flipbook frame
 
 ## "Meat Tornado"
 

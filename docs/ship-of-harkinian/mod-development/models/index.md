@@ -1,7 +1,3 @@
----
-sidebar_position: 1
----
-
 import Basics from "./basics/_basics.md";
 import Advanced from "./advanced/_advanced.md";
 

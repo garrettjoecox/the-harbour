@@ -1,7 +1,3 @@
----
-sidebar_position: 5
----
-
 import mtx_bytes from "/img/zship-modding/models/mtx_bytes.png"
 import useBaseUrl from '@docusaurus/useBaseUrl';
 

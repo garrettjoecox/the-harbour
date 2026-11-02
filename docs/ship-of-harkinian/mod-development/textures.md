@@ -1,7 +1,3 @@
----
-sidebar_position: 2
----
-
 import texture_guide_1 from "/img/zship-modding/textures/texture_guide_1.png"
 import texture_guide_2 from "/img/zship-modding/textures/texture_guide_2.png"
 import texture_guide_3 from "/img/zship-modding/textures/texture_guide_3.png"

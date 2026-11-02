@@ -1,7 +1,3 @@
----
-sidebar_position: 4
----
-
 import segmentc from "/img/zship-modding/models/segmentc.png"
 import culloptions from "/img/zship-modding/models/culloptions.png"
 

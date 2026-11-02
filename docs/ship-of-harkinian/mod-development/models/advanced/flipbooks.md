@@ -1,7 +1,3 @@
----
-sidebar_position: 1
----
-
 import step1 from "/img/zship-modding/models/flipbooks/step1.png"
 import step2 from "/img/zship-modding/models/flipbooks/step2.png"
 import step3a from "/img/zship-modding/models/flipbooks/step3a.png"

@@ -2,8 +2,7 @@
 title: "Mod Development"
 hide_title: True
 sidebar_label: "Home"
-description: "Modding documentation for the Ship of Harkinian PC Port"
-sidebar_position: 1
+description: "Modding documentation for the 2 Ship 2 Harkinian PC Port"
 ---
 
 import ModDevelopment from './_mod_development.md'

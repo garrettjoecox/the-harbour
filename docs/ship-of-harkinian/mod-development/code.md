@@ -1,7 +1,3 @@
----
-sidebar_position: 6
----
-
 # Code Modding
 
 > So you would like to create a code mod? _BUCKLE UP_
