@@ -21,8 +21,12 @@ on a page with 'one' in the path, and 'twoLink' when the user is on a page with 
 */
 export default function ConditionalNavbarItem({ label, graphic, to, href, showIn, mobile }) {
     const currLocation = useLocation().pathname;
-
+    let toFinal = null;
+    let hrefFinal = null;
+    let navbarItem = null;
     let locationIndex = -1;
+    let renderItem = true;
+
     if (typeof showIn !== 'string') { // if showIn is an array, check if current location is valid
         for (let i = 0; i < showIn.length; i++) {
             if (currLocation.search(new RegExp(showIn[i])) >= 1) { // check if current location is valid
@@ -30,40 +34,31 @@ export default function ConditionalNavbarItem({ label, graphic, to, href, showIn
                 break;
             }
         }
-        if (locationIndex === -1) { // don't render item if not in valid location
-            return null;
+        if (locationIndex === -1) // don't render item if not in valid location
+            renderItem = false;
+    }
+
+    if (renderItem) {
+        if (to) { // if called with "to", render as standard item
+            toFinal = (typeof to === 'string') ? to : to[locationIndex];
+            navbarItem = <DefaultNavbarItem to={toFinal} label={label} mobile={mobile} />;
         }
-    }
+        else if (href) { // if called with "href", render as external link
+            hrefFinal = (typeof href === 'string') ? href : href[locationIndex];
+            let isMobile = useWindowSize() === "mobile";
+            let className = graphic ?? "";
+            let renderLabel = !graphic || isMobile;
 
-    let toFinal = null;
-    let hrefFinal = null;
-
-    if (to) { // if called with "to", render as standard item
-        toFinal = (typeof to === 'string') ? to : to[locationIndex];
-        return <DefaultNavbarItem to={toFinal} label={label} mobile={mobile} />;
-    }
-    else if (href) { // if called with "href", render as external link
-        hrefFinal = (typeof href === 'string') ? href : href[locationIndex];
-        if (graphic) {
-            if (useWindowSize() === "mobile") {
-                return ( // on mobile view
-                    <DefaultNavbarItem 
-                        className={graphic + "-mobile"} 
-                        href={hrefFinal} 
-                        label={<span class="navbar-label-mobile">{label}</span>}
-                        mobile={mobile} 
-                    />
-                );
+            if (graphic && isMobile) {
+                className += "-mobile"; // essentially className = graphic + "-mobile"; ex: navbar-github-link-mobile 
+                label = <span class="navbar-label-mobile">{label}</span>; // adds some padding on the left for the graphic
             }
-            return ( // on desktop view
-                <div class= "tooltip">
-                    <DefaultNavbarItem className={graphic} href={hrefFinal} mobile={mobile} />
-                    <span class="tooltiptext">{label}</span> 
-                </div>
-            );
+            
+            navbarItem = <DefaultNavbarItem className={className} href={hrefFinal} label={renderLabel ? label : ""} mobile={mobile} />;
+            if (graphic && !isMobile) // display tooltip if item has graphic and user is on desktop view
+                navbarItem = <div class= "tooltip">{navbarItem}<span class="tooltiptext">{label}</span></div>;
         }
-        // no graphic
-        return <DefaultNavbarItem href={hrefFinal} label={label} mobile={mobile} />;
     }
-    return null; // don't render item if neither "to" or "href" is defined
+
+    return navbarItem;
 }
