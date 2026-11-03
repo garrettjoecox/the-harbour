@@ -21,13 +21,14 @@ on a page with 'one' in the path, and 'twoLink' when the user is on a page with 
 */
 export default function ConditionalNavbarItem({ label, graphic, to, href, showIn, mobile }) {
     const currLocation = useLocation().pathname;
-    let toFinal = null;
-    let hrefFinal = null;
     let navbarItem = null;
     let locationIndex = -1;
     let renderItem = true;
 
-    if (typeof showIn !== 'string') { // if showIn is an array, check if current location is valid
+    // check if current location is valid
+    if (typeof showIn === 'string') 
+        renderItem = currLocation.search(new RegExp(showIn)) >= 1
+    else if (Array.isArray(showIn)) { // check if current location is valid and get index of destination
         for (let i = 0; i < showIn.length; i++) {
             if (currLocation.search(new RegExp(showIn[i])) >= 1) { // check if current location is valid
                 locationIndex = i;
@@ -37,8 +38,12 @@ export default function ConditionalNavbarItem({ label, graphic, to, href, showIn
         if (locationIndex === -1) // don't render item if not in valid location
             renderItem = false;
     }
-
+    else renderItem = false;
+   
     if (renderItem) {
+        let toFinal = null;
+        let hrefFinal = null;
+
         if (to) { // if called with "to", render as standard item
             toFinal = (typeof to === 'string') ? to : to[locationIndex];
             navbarItem = <DefaultNavbarItem to={toFinal} label={label} mobile={mobile} />;
@@ -56,7 +61,7 @@ export default function ConditionalNavbarItem({ label, graphic, to, href, showIn
             
             navbarItem = <DefaultNavbarItem className={className} href={hrefFinal} label={renderLabel ? label : ""} mobile={mobile} />;
             if (graphic && !isMobile) // display tooltip if item has graphic and user is on desktop view
-                navbarItem = <div class= "tooltip">{navbarItem}<span class="tooltiptext">{label}</span></div>;
+                navbarItem = <div class="tooltip">{navbarItem}<span class="tooltiptext">{label}</span></div>;
         }
     }
 
