@@ -74,6 +74,28 @@
   --game-card-border-color: #2e343b;
 }
 
+html[data-special-theme='mm'][data-theme='dark'] {
+  --ifm-color-primary: #c299ff;
+  --ifm-color-primary-dark: #b685ff;
+  --ifm-color-primary-darker: #aa70ff;
+  --ifm-color-primary-darkest: #9d5cff;
+  --ifm-color-primary-light: #ceadff;
+  --ifm-color-primary-lighter: #dac2ff;
+  --ifm-color-primary-lightest: #e7d6ff;
+  --ifm-link-hover-color: #c299ff;
+}
+
+html[data-special-theme='mm'][data-theme='light'] {
+  --ifm-color-primary: #6f43b1;
+  --ifm-color-primary-dark: #6940a8;
+  --ifm-color-primary-darker: #643c9f;
+  --ifm-color-primary-darkest: #5e3996;
+  --ifm-color-primary-light: #7547b9;
+  --ifm-color-primary-lighter: #7b50bd;
+  --ifm-color-primary-lightest: #8259c0;
+  --ifm-link-hover-color: #6f43b1;
+}
+
 /* Righteous is a display face: brand and page titles only, never body or long headings. */
 .navbar__title,
 .hero__title,

@@ -7,8 +7,13 @@ sidebar_position: 1
 ---
 
 import ModDevelopment from '../mod-development/_mod_development.md'
+import ThemedImage from '@theme/ThemedImage';
+import logoLight from '/img/port-logos/2ship_lightmode.png'
+import logoDark from '/img/port-logos/2ship_darkmode.png'
 
-# 2 Ship 2 Harkinian
+<div class="text--center"> 
+    <ThemedImage alt="Docusaurus themed image" width="600" sources={{ light: logoLight, dark: logoDark }} />
+</div>
 
 ## General Info and Resources
 2 Ship 2 Harkinian is a fanmade PC Port For The Legend of Zelda: Majora's Mask, maintained by the 2Ship2Harkinian team.
