@@ -60,6 +60,23 @@ const config: Config = {
     ],
   ],
 
+  headTags: [
+    { // insert script to change page colors into html head on initial load, 
+      // allowing the color to change before document hydration, preventing FOUC
+      tagName: 'script',
+      attributes: {},
+      innerHTML: `
+        (function() {
+          let pathName = window.location.pathname;
+          let colorSet = ''; // default to none
+          if (pathName.includes("docs/2ship2harkinian")) { // in the 2ship directory
+            colorSet = 'mm'
+          }
+          document.documentElement.setAttribute('data-special-theme', colorSet);
+        })();`,
+    },
+  ],
+
   plugins: [
     [
       '@docusaurus/plugin-client-redirects',
@@ -81,6 +98,9 @@ const config: Config = {
       },
     ],
   ],
+
+  // global script to change page colors on in-site navigation
+  clientModules: ['./src/clientModules/pageColorOverride.js'],
 
   themeConfig: {
     colorMode: {
@@ -158,7 +178,8 @@ const config: Config = {
           showIn: [
             'docs/ship-of-harkinian',
             'docs/2ship2harkinian',
-            'the-harbour/$',
+            '!docs/', // hacky way of referring to the homepage, 
+                      // since it's the only page not in docs
           ],
           position: 'right',
         },

@@ -26,13 +26,24 @@ export default function ConditionalNavbarItem({ label, graphic, to, href, showIn
     let renderItem = true;
 
     // check if current location is valid
-    if (typeof showIn === 'string') 
-        renderItem = currLocation.search(new RegExp(showIn)) >= 1
+    if (typeof showIn === 'string') {
+        if (showIn.indexOf('!') == 0) // return true if path does *not* contain contents of showIn
+            renderItem = !(currLocation.search(new RegExp(showIn.substring(1))) >= 1)
+        else renderItem = currLocation.search(new RegExp(showIn)) >= 1
+    }
     else if (Array.isArray(showIn)) { // check if current location is valid and get index of destination
         for (let i = 0; i < showIn.length; i++) {
-            if (currLocation.search(new RegExp(showIn[i])) >= 1) { // check if current location is valid
-                locationIndex = i;
-                break;
+            if (showIn[i].indexOf('!') == 0) {
+                if (!(currLocation.search(new RegExp(showIn[i].substring(1))) >= 1)) { // check if current location is valid
+                    locationIndex = i;
+                    break;
+                }
+            }
+            else {
+                if (currLocation.search(new RegExp(showIn[i])) >= 1) { // check if current location is valid
+                    locationIndex = i;
+                    break;
+                }
             }
         }
         if (locationIndex === -1) // don't render item if not in valid location
