@@ -15,13 +15,13 @@ const config: Config = {
   },
 
   // Set the production url of your site here
-  url: 'https://nickel246.github.io',
+  url: 'https://your-docusaurus-site.example.com',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: '/the-harbour/',
+  baseUrl: '/',
 
   // GitHub pages deployment config.
-  organizationName: 'nickel246', // GitHub org/user name.
+  organizationName: 'garrettjoecox', // GitHub org/user name.
   projectName: 'the-harbour', // Repo name.
 
   onBrokenLinks: 'throw',
@@ -51,7 +51,7 @@ const config: Config = {
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            'https://github.com/nickel246/the-harbour/tree/model-tutorials/',
+            'https://github.com/garrettjoecox/the-harbour/tree/main/',
         },
         theme: {
           customCss: './src/css/custom.css',
@@ -251,7 +251,7 @@ const config: Config = {
     //         },
     //         {
     //           label: 'GitHub',
-    //           href: 'https://github.com/nickel246/the-harbour/tree/restructure-backup',
+    //           href: 'https://github.com/garrettjoecox/the-harbour/tree/main/',
     //         },
     //       ],
     //     },
