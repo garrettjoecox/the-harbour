@@ -1,7 +1,7 @@
 ---
 title: "2 Ship 2 Harkinian"
 hide_title: True
-sidebar_label: "Home"
+sidebar_label: "About"
 description: "A PC Port For The Legend of Zelda: Majora's Mask"
 sidebar_position: 1
 ---

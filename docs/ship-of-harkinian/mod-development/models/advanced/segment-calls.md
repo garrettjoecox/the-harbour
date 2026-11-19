@@ -17,11 +17,15 @@ Link's models (including equipment) uses Segment C to control his reflection in 
 
 Setting up your materials to account for this is fairly easy, if a little tedious. For each material on your Link model and/or equipment that you would normally want one-sided scroll down in your material settings to the table "OOT Dynamic Material Properties" and enable the checkbox labeled "Segment C"
 
-<img src={segmentc} alt="Segment C" width="300" />
+<div class="text--center"> 
+    <img src={segmentc} alt="Segment C" width="600" />
+</div>
 
 Next, move to the Geo tab in your material settings (if you don't see it make sure the "Show Simplified UI" checkbox is turned off). And uncheck Cull Back so that both Cull options are turned off.
 
-<img src={culloptions} alt="Cull Options" width="300" />
+<div class="text--center"> 
+    <img src={culloptions} alt="Cull Options" width="600" />
+</div>
 
 :::warning
 Any materials that use transparency such as translucency or cutouts (except decals which are fine) will not be able to pass through Segment C and will need Segment C disabled or else they will cause all sorts of graphical glitches on the reflection. If you want these materials to not be flipped inside out in the reflection, the only option is the disable Segment C and disable both Cull Front and Cull Back.

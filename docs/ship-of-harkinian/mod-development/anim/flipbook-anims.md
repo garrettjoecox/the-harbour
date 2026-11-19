@@ -18,30 +18,38 @@ Make sure you are on **frame 0**, go to the **Object Properties** tab, and have 
 
 Hover over the **Eyes** and **Mouth** parameters and press **I** on each to add a keyframe for both.
 
-<img src={image1} alt="Adding keyframes to Eyes and Mouth parameters" width="1000" />
+<div class="text--center"> 
+    <img src={image1} alt="Adding keyframes to Eyes and Mouth parameters" height="500" />
+</div>
 
 ### 2. Open the Graph Editor
 
 Switch to the **Graph Editor**. You should now see the two parameters listed.
 
-<img src={image2} alt="Eyes and Mouth parameters visible in the Graph Editor" width="1000" />
+<div class="text--center"> 
+    <img src={image2} alt="Eyes and Mouth parameters visible in the Graph Editor" height="500" />
+</div>
 
 ### 3. Group the channels
 
 Select both channels, then **right-click** and choose to group them.
 
-<img src={image3} alt="Right-clicking to group the channels" width="1000" />
+<div class="text--center"> 
+    <img src={image3} alt="Right-clicking to group the channels" height="500" />
+</div>
 
 ### 4. Name the group
 
 Name the group **`Texture Animations`**.
 
-<img src={image4} alt="Naming the group Texture Animations" width="1000" />
+<div class="text--center"> 
+    <img src={image4} alt="Naming the group Texture Animations" height="500" />
+</div>
 
 ### 5. Set interpolation to Constant
 
 The interpolation will be wrong by default — flipbooks switch frames instantly, not gradually. Press **A** to select all keyframes, then press **T** and select **Constant**.
 
-<img src={image5} alt="Selecting all keyframes" width="1000" />
-<img src={image6} alt="Pressing T to open interpolation menu" width="1000" />
+<img src={image5} alt="Selecting all keyframes" width="1000" style={{marginBottom: 10}}/>
+<img src={image6} alt="Pressing T to open interpolation menu" width="1000" style={{marginBottom: 10}}/>
 <img src={image7} alt="Constant interpolation selected" width="1000" />

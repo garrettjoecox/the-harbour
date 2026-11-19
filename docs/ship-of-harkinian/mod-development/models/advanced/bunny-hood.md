@@ -7,15 +7,13 @@ import image6 from "/img/zship-modding/models/bunny-hood/image6.JPG"
 
 # Custom Bunny Hoods
 
-<p align="center">
 <img src={image4} alt="Funni glorp hood" width="1000" />
-</p>
 
 :::note
-When I've made my bunnyhoods I've used  Blender 4.1 with the HM64 2.30 fork of Fast64 I don't know if that info matters but it may be helpful to someone. 
+When I've made my bunnyhoods I've used Blender 4.1 with the HM64 2.30 fork of Fast64 I don't know if that info matters but it may be helpful to someone. 
 :::
 
-Custom bunny hoods are luckily not cbt to make! The trick is editing the DL file to point to two very special matrix's that the bunny hood needs
+Custom bunny hoods are luckily not awful to make! The trick is editing the DL file to point to two very special matrix's that the bunny hood needs
 
 This guide won’t cover making the actual mesh, just the rigging, weighting, dl editing and getting it into game. Though I will recommend when making your mesh I’d advise you not to have any vertices between the base and tip as we only have two bones to work with so we can’t have smooth transitions between the head the ear
 
@@ -34,8 +32,7 @@ edited bunny hoods with their own materials seem to be ok with Goron bracelets
 The entire bunny hood vanilla mesh seems very strange and broken I do not recommend using it as a base, it's materials seem odd too
 
 
-
-# Material Info
+## Material Info
 
 Give the base any material like you would any other object double check it's format is RGBA 16-bit 
 
@@ -46,12 +43,14 @@ The vertices that are weighted to each ears/bits that jiggle, should only have 1
 You can have multiple materials on your mesh but only have one per ear bone
 
 
-# Skeleton editing
+## Skeleton editing
 
 For each ear to work we’ve got to add the extra bones to the skeleton, select Link's skeleton in object mode, and duplicate it with Ctrl+D
 Rename both the armature object (orange man icon) and the Armature (The green man) they can share a name, in my case it's `Bunnyskell`
 
-<img src={image2} alt="Dupped renamed Skeleton" width="700" />
+<div class="text--center"> 
+	<img src={image2} alt="Duped renamed Skeleton" width="700" />
+</div>
 
 Either copy the hat bone or go into edit mode an add a bone (length don't matter I tend to keep mine small or close to Link’s other bones), make sure the bone does not have "Connected" ticked then make that bone a child of Link’s head bone `bone010_gLinkChildHeadLimb`
 
@@ -71,7 +70,7 @@ I don't think the names matter but I'm using this,
 if you're wondering I start at 021 as link's bones end at 20 so any new ones need to start after 20
 
 
-# Weight Painting
+## Weight Painting
 
 With the skeleton duped and the bones copied we now need to rig the bunny hood to the new skeleton you can do this by going back to object mode
 	select the bunny hood then the skeleton 
@@ -90,7 +89,7 @@ To check if the weights are good, stay in edit mode, unselect all vertices, pick
 <img src={image5} alt="Weight painted ears" width="1000" />
 
 
-# Exporting the Skeleton
+## Exporting the Skeleton
 
 
 We should be good to export it now, select the skeleton
@@ -114,7 +113,7 @@ Other than that restriction you can set whatever name you want as long as it's i
 Make sure the bunny hood exports to it's own folder and not overwriting anything else
 
 
-# Display List editing
+## Display List editing
 
 This is the scary part but it's not hard! If you done the rigged-dls tutorial this is a very similar process
 We need to leave Blender and make our DL inside the object_link_child folder, not in the folder we exported our bunny hood to

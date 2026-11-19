@@ -24,7 +24,9 @@ Each Link has 12 flipbooks textures total--8 eyes and 4 mouths. Before starting,
 
 Go to the eye material for your player model, and make sure you have a texture set for the eyes (best practice is to just use the neutral eyes-open texture). If you are using a Color-Indexed format, make sure you set your desired number of colors now; you can ignore the TLUT name for now. Underneath "Set Texture" select "Use Texture Reference" and in the box type `0x08000000` as your texture reference. This is what links the eye textures to this material. Set the texture size to match the dimensions of your eye textures. If you are using a Color-Indexed format you may now input your desired TLUT path in the "Palette Reference" box. Note that the **entire path** of the TLUT must be typed in, not just the name (ie `objects/object_link_boy/gEyesTLUT` instead of just `gEyesTLUT`).
 
-<img src={step1} alt="Texture Reference" width="300" />
+<div class="text--center"> 
+    <img src={step1} alt="Texture Reference" width="600" />
+</div>
 
 Next, scroll down in your material settings to where it says "Flipbook Properties" and click "Export Flipbook Textures 0". Set the Export Mode to Array if it is not already and type in a name for the array (doesn't really matter what you put so long as it's unique). Now switch the Export Mode to Individual.
 
@@ -33,7 +35,9 @@ Next, scroll down in your material settings to where it says "Flipbook Propertie
 
 For each eye texture in the [flipbook table](#link-flipbook-table) for your corresponding Link: Click on "Add Texture" and where it says "Texture Name" copy and paste the name from the table. Now set this texture to use the png you set up for this expression (you will likely have to hit "Open" and navigate to where you have the texture stored on your device). You can now hit "Visualize" if you want to check how the expression looks on your model.
 
-<img src={step2} alt="Setting Textures" width="300" />
+<div class="text--center"> 
+    <img src={step2} alt="Setting Textures" width="600" />
+</div>
 
 :::warning
 Your textures will not work in-game unless the names match *exactly* with the [table below](#link-flipbook-table). Pay close attention to the fact that the name of the closed-eyes texture says Closed**f**Tex instead of ClosedTex. This is **not** a mistake in the table, just one of many typos in the game itself. This is why it is recommended to copy and paste directly from the table rather than retyping it yourself. 
@@ -44,8 +48,10 @@ Your textures will not work in-game unless the names match *exactly* with the [t
 
 Repeat Steps 1 and 2, but when inputting the Texture Reference use `0x09000000` instead. Just like with the eyes, this is what links the mouth textures to this material. Other than that, all steps are the same, just with your mouth textures and names rather than the eyes. Also use the dimensions of the mouth textures when inputting the texture size.
 
-<img src={step3a} alt="Mouth Reference" width="300" />
-<img src={step3b} alt="Mouth Textures" width="300" />
+<div class="text--center"> 
+    <img src={step3a} alt="Mouth Reference" width="600" style={{marginBottom: 10}}/>  
+    <img src={step3b} alt="Mouth Textures" width="600" />
+</div>
 
 
 ## Step 4 - Export
