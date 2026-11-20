@@ -29,7 +29,7 @@ const GameList: GameItem[] = [
       {
         name: 'Ship of Harkinian',
         team: 'Harbour Masters',
-        docsPath: '/docs/ship-of-harkinian',
+        docsPath: '/docs/ship-of-harkinian/info/',
         downloadsUrl: 'https://github.com/HarbourMasters/shipwright/releases/latest',
         modpageUrl: 'https://gamebanana.com/games/16121'
       },
@@ -42,7 +42,7 @@ const GameList: GameItem[] = [
       {
         name: '2Ship2Harkinian',
         team: '2Ship2Harkinian',
-        docsPath: '/docs/2ship2harkinian',
+        docsPath: '/docs/2ship2harkinian/info/',
         downloadsUrl: 'https://github.com/2ship2harkinian/2ship2harkinian/releases/latest',
         modpageUrl: 'https://gamebanana.com/games/20371'
       },

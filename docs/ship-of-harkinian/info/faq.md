@@ -1,7 +1,3 @@
----
-sidebar_position: 1
----
-
 # F.A.Q.
 
 ## Where can I get a ROM?
