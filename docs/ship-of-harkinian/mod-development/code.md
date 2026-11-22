@@ -1,3 +1,10 @@
+import { RepoName, RepoURL } from '@site/src/usePortName.js';
+import CodeBlock from '@theme/CodeBlock';
+export function BuildGuide() {
+    let buildLink = RepoURL() + "/blob/develop/docs/BUILDING.md";
+    return <a href={buildLink}>BUILDING</a>;
+}
+
 # Code Modding
 
 > So you would like to create a code mod? _BUCKLE UP_
@@ -10,16 +17,16 @@ General coding knowledge is also usually a requirement. You might be able to get
 
 ## Making a fork in the road
 
-Your first step is to fork the repository. To do this, you will need a github account. Assuming you have a github account you can navigate to the Shipwright repo [here](https://github.com/HarbourMasters/Shipwright) and press the `Fork` button in the top right of the screen. When that process is complete you should land on a page that looks similar to the original repo, but under your username (eg: `https://github.com/<GITHUB USERNAME>/Shipwright`).
+Your first step is to fork the repository. To do this, you will need a github account. Assuming you have a github account you can navigate to the <RepoName/> repo <a href={RepoURL()}>here</a> and press the `Fork` button in the top right of the screen. When that process is complete you should land on a page that looks similar to the original repo, but under your username (eg: <code>`https://github.com/<GITHUB USERNAME>/`<RepoName/></code>).
 
 On this page you should see a green `Code` button, click this and copy the URL within. (You may use the github desktop app here as well, but I will not provide instructions for it). Then in your terminal/command prompt you will git clone to a local development folder using the copied URL
 
-```bash
-cd <path to where you'll clone (eg, ~/Documents)>
-git clone https://github.com/<GITHUB USERNAME>/Shipwright.git
-```
+<CodeBlock language="bash">
+{`cd <path to where you'll clone (eg, ~/Documents)>
+git clone https://github.com/<GITHUB USERNAME>/`}<RepoName/>{`.git`}
+</CodeBlock>
 
-At this point, I will now direct you to our [BUILDING](https://github.com/HarbourMasters/Shipwright/blob/develop/docs/BUILDING.md) guide, it will have the most up to date documentation on getting the Ship running on your local machine. Once you have successfully built and launched the executable you may return here.
+At this point, I will now direct you to our <BuildGuide/> guide, it will have the most up to date documentation on getting the Ship running on your local machine. Once you have successfully built and launched the executable you may return here.
 
 ## Look at all those branches!
 
@@ -39,7 +46,7 @@ You can name your branch whatever you want, but it's recommended to name it some
 
 ## Making the changes
 
-The limit is your imagination. You can add new features, fix bugs, add new mods, or even change the way the game works. We will demonstrate this by creating a mod that changes the speed of the day/night cycle.
+The limit is your imagination. You can add new features, fix bugs, add new mods, or even change the way the game works. We will demonstrate this by creating a mod for Ship of Harkinian that changes the speed of the day/night cycle.
 
 Let's begin by finding where the time is updated. Thankfully in the save editor we have a slider already hooked up to the time of day so we can check there for reference. The save editor file is at `soh/soh/Enhancements/debugger/debugSaveEditor.cpp`, if we do a quick search within that file for time we will find the following at around line 325:
 
@@ -149,27 +156,29 @@ git push origin <BRANCH NAME>
 ## Sharing the treasure
 
 Now that you have made your changes, you can share them with the world! You can do this by creating a pull request to your own fork. You can navigate around in the Github UI to find this, or you can use the following replacing the relevant info:
-```
-https://github.com/<GITHUB USERNAME>/Shipwright/compare/develop...<BRANCH NAME>
-```
+<CodeBlock language="bash">
+{`https://github.com/<GITHUB USERNAME>/`}<RepoName/>{`/compare/develop...<BRANCH NAME>`}
+</CodeBlock>
 
 From there you should see all of your changes listed, and a big green `Create pull request` button. You can fill out relevant information and a title and create the pull request. Once you have done this the CI will begin building distributables for your changes, and when they are ready they will be added to the bottom of your Pull request description! (See other PRs for examples)
 
-Note: DO NOT MERGE THIS PULL REQUEST. You will want your fork's develop branch to stay in sync with the upstream develop branch. We will go over this in the next section, but all changes should stay on their own branches, with open PR's to continue generating distributables.
+:::warning 
+DO NOT MERGE THIS PULL REQUEST. You will want your fork's develop branch to stay in sync with the upstream develop branch. We will go over this in the next section, but all changes should stay on their own branches, with open PR's to continue generating distributables.
+:::
 
 ## Maintaining your fork'in mod
 
 A month has passed, and new features have been added upstream that you want included in your distribution. You can do this by rebasing your branch on top of the upstream develop branch. You can do this with the following commands:
 
-```bash
-# This command will add the upstream repository as a remote, only needs to be done once
-git remote add upstream https://github.com/HarbourMasters/Shipwright.git
+<CodeBlock language="bash">
+{`# This command will add the upstream repository as a remote, only needs to be done once
+git remote add upstream `}<RepoURL/>{`.git
 
 git checkout develop
 git pull upstream develop
 git checkout <BRANCH NAME>
-git pull origin develop --rebase
-```
+git pull origin develop --rebase`}
+</CodeBlock>
 
 If you happen to run into merge conflicts, it is outside the scope of this tutorial to explain how to resolve them. If you want to abort the rebase you can run the following command:
 
@@ -187,13 +196,13 @@ git push origin <BRANCH NAME> --force
 
 You have been working on your mod for a while, and you want to combine it with another mod. You can do this by adding the other mod as a remote, and then merging it into your branch. You can do this with the following commands:
 
-```bash
-# This command will add the other repository as a remote, only needs to be done once
-git remote add <MOD AUTHOR NAME> https://github.com/<MOD AUTHOR>/Shipwright.git
+<CodeBlock language="bash">
+{`# This command will add the other repository as a remote, only needs to be done once
+git remote add <MOD AUTHOR NAME> https://github.com/<MOD AUTHOR>/`}<RepoName/>{`.git
 
 git checkout <YOUR BRANCH NAME>
-git pull <MOD AUTHOR NAME> <MOD AUTHOR BRANCH NAME>
-```
+git pull <MOD AUTHOR NAME> <MOD AUTHOR BRANCH NAME>`}
+</CodeBlock>
 
 If you happen to run into merge conflicts, it is outside the scope of this tutorial to explain how to resolve them. If you want to abort the merge you can run the following command:
 
