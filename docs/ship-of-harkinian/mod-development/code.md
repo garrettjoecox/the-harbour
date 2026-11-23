@@ -17,7 +17,7 @@ General coding knowledge is also usually a requirement. You might be able to get
 
 ## Making a fork in the road
 
-Your first step is to fork the repository. To do this, you will need a github account. Assuming you have a github account you can navigate to the <RepoName/> repo <a href={RepoURL()}>here</a> and press the `Fork` button in the top right of the screen. When that process is complete you should land on a page that looks similar to the original repo, but under your username (eg: <code>`https://github.com/<GITHUB USERNAME>/`<RepoName/></code>).
+Your first step is to fork the repository. To do this, you will need a github account. Assuming you have a github account you can navigate to the <RepoName/> repo <a href={RepoURL()}>here</a> and press the `Fork` button in the top right of the screen. When that process is complete you should land on a page that looks similar to the original repo, but under your username (eg: <code>{`https://github.com/<GITHUB USERNAME>/`}<RepoName/></code>).
 
 On this page you should see a green `Code` button, click this and copy the URL within. (You may use the github desktop app here as well, but I will not provide instructions for it). Then in your terminal/command prompt you will git clone to a local development folder using the copied URL
 
